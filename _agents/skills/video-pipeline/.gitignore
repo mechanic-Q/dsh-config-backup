@@ -1,0 +1,55 @@
+# Secrets & credentials
+.env
+*.env
+cookies/
+*cookie*.json
+.git-credentials
+
+# Generated media (large files, not for git)
+480P/
+*.mp4
+*.mp3
+*.wav
+!assets/sfx/*.wav
+*.m4a
+*.png
+*.jpg
+*.jpeg
+*.gif
+
+# Logs & temp
+*.log
+heartbeat_out.txt
+monitor_out.txt
+ltx_log.txt
+/tmp/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
+# 重构期防覆盖快照（check_overwrite.py 运行时状态，不入库）
+.overwrite_state.json
+
+# graphify artifacts (rebuildable: python -m graphify update .)
+graphify-out/
+
+# sau(social-auto-upload) 用 cwd 相对路径开 db —— driver 在 skill 目录调 sau 时
+# 会把 data/data.sqlite3 落进 scripts/data/（0908 实证，纯空库无价值）
+scripts/data/
+
+# Chrome 专用 profile（视频号登录态 cookie，严禁入库）
+assets/chrome-tencent-profile/
+
+# 测试 / 调试期临时目录（#147：这些是 test_s08_judge_loop、test_human_flag_loop、
+# test_evidence_train_chain 在仓库内建的，一合并就把工作树弄脏；前缀无斜杠以匹配任意层级）
+.tmp_*/
+t18t_*/
+
+# implementer 工作树（本地 .git/info/exclude 也有，但那只在本机生效，必须入库）
+.wt/

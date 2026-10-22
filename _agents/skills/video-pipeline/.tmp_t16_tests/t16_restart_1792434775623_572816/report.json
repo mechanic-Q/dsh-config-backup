@@ -1,0 +1,35 @@
+{
+ "slug": "t16-restart",
+ "stages": {},
+ "judge_rounds": [
+  {
+   "round": "round0",
+   "ok": true,
+   "reburn": [
+    "shot01"
+   ],
+   "judged": [
+    "shot01",
+    "shot02"
+   ]
+  },
+  {
+   "round": "round1",
+   "ok": false,
+   "error": "判官超时"
+  }
+ ],
+ "total_minutes": 29873912.9,
+ "finished_at": "2026-10-20 02:32:55",
+ "judge_disagreements": [
+  {
+   "round": "round0",
+   "rows": [
+    {
+     "sid": "shot01",
+     "kind": "confirmed"
+    }
+   ]
+  }
+ ]
+}

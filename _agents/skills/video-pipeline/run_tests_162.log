@@ -1,0 +1,61 @@
+����=Windows ������=C:\Users\LMR\anaconda3\python.exe �汾=3.13.0
+����Ŀ¼: C:\Users\LMR\.agents\skills\video-pipeline\scripts��37 ���ļ���ѡ�� 37��
+  PASS             test_comfyui_selfheal.py            0.1s
+  PASS             test_daily_review.py                0.1s
+  PASS             test_dataset_readonly.py            0.1s
+  FAIL             test_driver_status.py               0.5s ���� �˳��� 1
+  PASS             test_dsh_judge.py                   1.5s
+  PASS             test_enum_correct.py                0.7s
+  PASS             test_evidence_train_chain.py        1.2s
+  PASS             test_feishu_gate.py                 0.6s
+  PASS             test_feishu_gate_token_heal.py      1.4s
+  PASS             test_gen_krea2_cover.py             0.1s
+  PASS             test_host_contract.py               0.4s
+  PASS             test_human_flag_loop.py             0.2s
+  PASS             test_install_location.py            1.4s
+  PASS             test_jev_calibrate.py               0.1s
+  PASS             test_ledger.py                      0.1s
+  PASS             test_mechanical.py                  2.5s
+  PASS             test_newspaper_cover.py            27.0s
+  PASS             test_preflight.py                   0.6s
+  PASS             test_reconcile_clip.py             12.5s
+  PASS             test_repo_hygiene.py                0.4s
+  PASS             test_rotation_dataset.py            0.1s
+  PASS             test_run_pipeline.py               13.2s
+  PASS             test_run_tests.py                   1.6s
+  PASS             test_s08_judge_loop.py              5.9s
+  PASS             test_schema_strip_motion.py         0.2s
+  PASS             test_sph_publish.py                 0.1s
+  PASS             test_storyboard_enhancer.py         0.4s
+  PASS             test_strata_copychain.py           13.5s
+  PASS             test_strata_h3_lane.py             12.2s
+  PASS             test_strata_window.py               0.1s
+  PASS             test_t15_replay.py                  0.1s
+  PASS             test_verify_output.py               1.7s
+  PASS             test_vision_chain.py                0.1s
+  PASS             test_vision_date_root.py            0.1s
+  PASS             test_vision_driver.py              33.8s
+  PASS             test_vision_evidence.py            13.9s
+  PASS             test_vision_shortcircuit.py         0.1s
+
+ʧ����ϸ
+  test_driver_status.py��0.5s��
+    �˳���: 1
+    ����: with open(h.path, encoding="utf-8") as f:
+    λ��: C:\Users\LMR\.agents\skills\video-pipeline\scripts\test_driver_status.py:218
+    ���β��:
+      test_driver_status: �ѱ���pid ���� + ����ɱ�� + �˳���ɶ���OK
+      test_driver_status: �ѱ������˳���¼ = �� kill��OK
+      test_driver_status: δ��ʼ����Ŀ¼���󱨱�����OK
+      test_driver_status: report.json finished_at ������ɱ�� OK
+      test_driver_status: ��ֵ CLI>env>Ĭ��300 + �Ƿ�ֵ fail-fast OK
+      test_driver_status: ֻ������ѯǰ��Ŀ¼����һ�£�OK
+      test_driver_status: һ���ɶ����׶�/��ʱ/��������/����/��־β��OK
+      Traceback (most recent call last):
+        File "C:\Users\LMR\.agents\skills\video-pipeline\scripts\test_driver_status.py", line 218, in <module>
+          with open(h.path, encoding="utf-8") as f:
+               ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+      PermissionError: [Errno 13] Permission denied: 'C:\\Users\\LMR\\AppData\\Local\\Temp\\ds146hb_6741c3__\\heartbeat.json'
+
+�ϼ�: ��=36 ��=1 known-red=0 �ܺ�ʱ=148.2s
+ʧ�� 1 ���ļ����˳��� 1��

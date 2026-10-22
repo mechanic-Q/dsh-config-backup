@@ -1,0 +1,106 @@
+{
+  "accounts": [
+    {
+      "id": "workbuddy-c9f7d45d",
+      "provider": "workbuddy",
+      "nickname": "jeremiel360@gmail.com",
+      "enabled": true,
+      "credentialRef": "WORKBUDDY_ACCOUNT_C505D3AB",
+      "refreshable": true,
+      "createdAt": 1792062593143,
+      "expiresAt": 1823573277000,
+      "modelRateLimits": {
+        "deepseek-v4.1-flash-sg": 1792413039041,
+        "deepseek-v4.1-flash": 1792571781000,
+        "glm-5.3-flash": 1792421506084
+      }
+    },
+    {
+      "id": "workbuddy-0469873b",
+      "provider": "workbuddy",
+      "nickname": "mechanic-q",
+      "enabled": true,
+      "credentialRef": "WORKBUDDY_ACCOUNT_6F9FA25C",
+      "refreshable": true,
+      "createdAt": 1792062639402,
+      "expiresAt": 1823598623000,
+      "modelRateLimits": {
+        "deepseek-v4.1-flash-sg": 1792464476000,
+        "deepseek-v4.1-flash": 1792464476000
+      }
+    },
+    {
+      "id": "zcode-2c693ae6",
+      "provider": "zcode",
+      "nickname": "ZCode vcwwzpo1",
+      "enabled": true,
+      "credentialRef": "ZCODE_ACCOUNT_357592EB",
+      "refreshable": false,
+      "createdAt": 1792079321722
+    },
+    {
+      "id": "codearts-7473fd5f",
+      "provider": "codearts",
+      "nickname": "codearts-7473fd5f",
+      "enabled": true,
+      "credentialRef": "CODEARTS_ACCOUNT_53F4EB75",
+      "refreshable": true,
+      "createdAt": 1792158256495,
+      "expiresAt": 1792679984240
+    },
+    {
+      "id": "buddy-d799c226",
+      "provider": "buddy",
+      "nickname": "131****9272",
+      "enabled": true,
+      "credentialRef": "BUDDY_ACCOUNT_4F2C43FE",
+      "refreshable": true,
+      "createdAt": 1792256998562,
+      "expiresAt": 1794676223000,
+      "modelRateLimits": {
+        "deepseek-v4.1-flash": 1792474903000
+      }
+    },
+    {
+      "id": "qodercn-d5f48139",
+      "provider": "qodercn",
+      "nickname": "神奇的春分",
+      "enabled": true,
+      "credentialRef": "QODERCN_ACCOUNT_0658CA1C",
+      "refreshable": true,
+      "createdAt": 1792422506121,
+      "expiresAt": 1795014551000,
+      "modelRateLimits": {
+        "dfmodel": 1792512000000,
+        "qfmodel": 1792512000000
+      }
+    },
+    {
+      "id": "qoder-6abd4190",
+      "provider": "qoder",
+      "nickname": "h ian",
+      "enabled": true,
+      "credentialRef": "QODER_ACCOUNT_3F404004",
+      "refreshable": true,
+      "createdAt": 1792422648578,
+      "expiresAt": 1795014712000,
+      "modelRateLimits": {
+        "qfmodel": 1792512000000,
+        "dfmodel": 1792512000000
+      }
+    }
+  ],
+  "disabledModels": {
+    "codearts": {
+      "deepseek-v4-flash": true,
+      "deepseek-v4-pro": true,
+      "GLM-5.2": true,
+      "openpangu-2.0-flash": true,
+      "openpangu-2.0-pro": true,
+      "glm-5.2-sft-harmony": true
+    }
+  },
+  "loomyPermanentLocked": false,
+  "gatewayEnabled": true,
+  "providerOrder": []
+}

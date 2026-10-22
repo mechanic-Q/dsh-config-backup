@@ -1,0 +1,6 @@
+# T14 #126 判官运行体：默认模型跟桌面宿主主用 provider/模型走。
+# 2026-10-16 起桌面主用 buddy/glm-5.3-flash（deepseek-v4.1-flash 已不再由凭据面板下发）。
+- id: agent-default-model
+  config:
+    provider: buddy
+    model: glm-5.3-flash

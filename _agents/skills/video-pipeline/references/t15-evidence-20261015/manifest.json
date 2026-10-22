@@ -1,0 +1,823 @@
+{
+  "episode": [
+    "2026-10-15",
+    "daily-china-20261015"
+  ],
+  "human_flips": [
+    "shot03",
+    "shot09",
+    "shot15",
+    "shot18",
+    "shot19"
+  ],
+  "rounds": [
+    {
+      "round": "round0",
+      "judged": 19,
+      "reburn": [
+        "shot03",
+        "shot09",
+        "shot15",
+        "shot18",
+        "shot19"
+      ],
+      "summary": "确认翻转 0 / 判官新发现 5 / 本地误报 0 / 一致正常 14"
+    },
+    {
+      "round": "round1",
+      "judged": 5,
+      "reburn": [
+        "shot03",
+        "shot09",
+        "shot15",
+        "shot18",
+        "shot19"
+      ],
+      "summary": "确认翻转 0 / 判官新发现 5 / 本地误报 0 / 一致正常 0"
+    },
+    {
+      "round": "round2",
+      "judged": 5,
+      "reburn": [
+        "shot03",
+        "shot09",
+        "shot15",
+        "shot18",
+        "shot19"
+      ],
+      "summary": "确认翻转 0 / 判官新发现 5 / 本地误报 0 / 一致正常 0"
+    }
+  ],
+  "evidence": [
+    {
+      "category": "2-judge-found",
+      "sid": "shot03",
+      "round": "round0",
+      "frame": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\references\\t15-evidence-20261015\\2-judge-found\\round0_shot03.jpg",
+      "frame_win": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\references\\t15-evidence-20261015\\2-judge-found\\round0_shot03.jpg",
+      "source_frame": "E:\\每日新中国\\2026-10-15\\video\\每日新中国b站\\流水线\\daily-china-20261015\\_frames\\shot03.jpg",
+      "sha256": "08ab5733806bd72403bbd098975e064df397cf8008f9c94e6414fa24adfffa98",
+      "judge": "翻转90",
+      "conf": 0.9,
+      "why": "地面在左天空在右，亭台横躺",
+      "local_verdict": "正常",
+      "synthetic": false,
+      "note": ""
+    },
+    {
+      "category": "2-judge-found",
+      "sid": "shot09",
+      "round": "round0",
+      "frame": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\references\\t15-evidence-20261015\\2-judge-found\\round0_shot09.jpg",
+      "frame_win": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\references\\t15-evidence-20261015\\2-judge-found\\round0_shot09.jpg",
+      "source_frame": "E:\\每日新中国\\2026-10-15\\video\\每日新中国b站\\流水线\\daily-china-20261015\\_frames\\shot09.jpg",
+      "sha256": "6165218936f4c778260f22d7d2779f14d0fe0c1348923e3f4b6db79464d5997f",
+      "judge": "翻转90",
+      "conf": 0.92,
+      "why": "天空在右，人物棉花横向躺倒",
+      "local_verdict": "正常",
+      "synthetic": false,
+      "note": ""
+    },
+    {
+      "category": "2-judge-found",
+      "sid": "shot15",
+      "round": "round0",
+      "frame": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\references\\t15-evidence-20261015\\2-judge-found\\round0_shot15.jpg",
+      "frame_win": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\references\\t15-evidence-20261015\\2-judge-found\\round0_shot15.jpg",
+      "source_frame": "E:\\每日新中国\\2026-10-15\\video\\每日新中国b站\\流水线\\daily-china-20261015\\_frames\\shot15.jpg",
+      "sha256": "96d457518232e71e11dd4a5eb5554a88677d9795abba5f73ffbfb044dc0a0fe5",
+      "judge": "翻转90",
+      "conf": 0.9,
+      "why": "海面竖向，两人横躺，天空在右",
+      "local_verdict": "正常",
+      "synthetic": false,
+      "note": ""
+    },
+    {
+      "category": "2-judge-found",
+      "sid": "shot18",
+      "round": "round0",
+      "frame": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\references\\t15-evidence-20261015\\2-judge-found\\round0_shot18.jpg",
+      "frame_win": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\references\\t15-evidence-20261015\\2-judge-found\\round0_shot18.jpg",
+      "source_frame": "E:\\每日新中国\\2026-10-15\\video\\每日新中国b站\\流水线\\daily-china-20261015\\_frames\\shot18.jpg",
+      "sha256": "0e603b5d3b2ce3a0d19d9836daa96d326fff4780dfa4cdaf3475aa689a6dcff7",
+      "judge": "翻转90",
+      "conf": 0.92,
+      "why": "地面在左天空在右，士兵横躺",
+      "local_verdict": "正常",
+      "synthetic": false,
+      "note": ""
+    },
+    {
+      "category": "2-judge-found",
+      "sid": "shot19",
+      "round": "round0",
+      "frame": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\references\\t15-evidence-20261015\\2-judge-found\\round0_shot19.jpg",
+      "frame_win": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\references\\t15-evidence-20261015\\2-judge-found\\round0_shot19.jpg",
+      "source_frame": "E:\\每日新中国\\2026-10-15\\video\\每日新中国b站\\流水线\\daily-china-20261015\\_frames\\shot19.jpg",
+      "sha256": "d1ac29877358970ab691d057e0ae0debd93495a6c00b6d22b6fed5a33971566f",
+      "judge": "翻转90",
+      "conf": 0.92,
+      "why": "天空在左，士兵旗帜横向倒伏",
+      "local_verdict": "正常",
+      "synthetic": false,
+      "note": ""
+    },
+    {
+      "category": "2-judge-found",
+      "sid": "shot03",
+      "round": "round1",
+      "frame": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\references\\t15-evidence-20261015\\2-judge-found\\round1_shot03.jpg",
+      "frame_win": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\references\\t15-evidence-20261015\\2-judge-found\\round1_shot03.jpg",
+      "source_frame": "E:\\每日新中国\\2026-10-15\\video\\每日新中国b站\\流水线\\daily-china-20261015\\_frames\\shot03.jpg",
+      "sha256": "08ab5733806bd72403bbd098975e064df397cf8008f9c94e6414fa24adfffa98",
+      "judge": "翻转90",
+      "conf": 0.95,
+      "why": "石台竖直在左，云天在右，人物横躺",
+      "local_verdict": "正常",
+      "synthetic": false,
+      "note": "离线无重烧，帧仍为原始现场帧"
+    },
+    {
+      "category": "2-judge-found",
+      "sid": "shot09",
+      "round": "round1",
+      "frame": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\references\\t15-evidence-20261015\\2-judge-found\\round1_shot09.jpg",
+      "frame_win": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\references\\t15-evidence-20261015\\2-judge-found\\round1_shot09.jpg",
+      "source_frame": "E:\\每日新中国\\2026-10-15\\video\\每日新中国b站\\流水线\\daily-china-20261015\\_frames\\shot09.jpg",
+      "sha256": "6165218936f4c778260f22d7d2779f14d0fe0c1348923e3f4b6db79464d5997f",
+      "judge": "翻转90",
+      "conf": 0.97,
+      "why": "棉田在左，天空落日在右，人物横躺",
+      "local_verdict": "正常",
+      "synthetic": false,
+      "note": "离线无重烧，帧仍为原始现场帧"
+    },
+    {
+      "category": "2-judge-found",
+      "sid": "shot15",
+      "round": "round1",
+      "frame": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\references\\t15-evidence-20261015\\2-judge-found\\round1_shot15.jpg",
+      "frame_win": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\references\\t15-evidence-20261015\\2-judge-found\\round1_shot15.jpg",
+      "source_frame": "E:\\每日新中国\\2026-10-15\\video\\每日新中国b站\\流水线\\daily-china-20261015\\_frames\\shot15.jpg",
+      "sha256": "96d457518232e71e11dd4a5eb5554a88677d9795abba5f73ffbfb044dc0a0fe5",
+      "judge": "翻转90",
+      "conf": 0.97,
+      "why": "海面竖直居中，天空在右，人物横躺",
+      "local_verdict": "正常",
+      "synthetic": false,
+      "note": "离线无重烧，帧仍为原始现场帧"
+    },
+    {
+      "category": "2-judge-found",
+      "sid": "shot18",
+      "round": "round1",
+      "frame": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\references\\t15-evidence-20261015\\2-judge-found\\round1_shot18.jpg",
+      "frame_win": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\references\\t15-evidence-20261015\\2-judge-found\\round1_shot18.jpg",
+      "source_frame": "E:\\每日新中国\\2026-10-15\\video\\每日新中国b站\\流水线\\daily-china-20261015\\_frames\\shot18.jpg",
+      "sha256": "0e603b5d3b2ce3a0d19d9836daa96d326fff4780dfa4cdaf3475aa689a6dcff7",
+      "judge": "翻转90",
+      "conf": 0.97,
+      "why": "地面城墙在左，天空在右，士兵横躺",
+      "local_verdict": "正常",
+      "synthetic": false,
+      "note": "离线无重烧，帧仍为原始现场帧"
+    },
+    {
+      "category": "2-judge-found",
+      "sid": "shot19",
+      "round": "round1",
+      "frame": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\references\\t15-evidence-20261015\\2-judge-found\\round1_shot19.jpg",
+      "frame_win": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\references\\t15-evidence-20261015\\2-judge-found\\round1_shot19.jpg",
+      "source_frame": "E:\\每日新中国\\2026-10-15\\video\\每日新中国b站\\流水线\\daily-china-20261015\\_frames\\shot19.jpg",
+      "sha256": "d1ac29877358970ab691d057e0ae0debd93495a6c00b6d22b6fed5a33971566f",
+      "judge": "翻转90",
+      "conf": 0.97,
+      "why": "草地在左，云天在右，军阵横躺",
+      "local_verdict": "正常",
+      "synthetic": false,
+      "note": "离线无重烧，帧仍为原始现场帧"
+    },
+    {
+      "category": "2-judge-found",
+      "sid": "shot03",
+      "round": "round2",
+      "frame": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\references\\t15-evidence-20261015\\2-judge-found\\round2_shot03.jpg",
+      "frame_win": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\references\\t15-evidence-20261015\\2-judge-found\\round2_shot03.jpg",
+      "source_frame": "E:\\每日新中国\\2026-10-15\\video\\每日新中国b站\\流水线\\daily-china-20261015\\_frames\\shot03.jpg",
+      "sha256": "08ab5733806bd72403bbd098975e064df397cf8008f9c94e6414fa24adfffa98",
+      "judge": "翻转90",
+      "conf": 0.97,
+      "why": "地面在左缘竖条，天空在右，主体横躺",
+      "local_verdict": "正常",
+      "synthetic": false,
+      "note": "离线无重烧，帧仍为原始现场帧"
+    },
+    {
+      "category": "2-judge-found",
+      "sid": "shot09",
+      "round": "round2",
+      "frame": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\references\\t15-evidence-20261015\\2-judge-found\\round2_shot09.jpg",
+      "frame_win": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\references\\t15-evidence-20261015\\2-judge-found\\round2_shot09.jpg",
+      "source_frame": "E:\\每日新中国\\2026-10-15\\video\\每日新中国b站\\流水线\\daily-china-20261015\\_frames\\shot09.jpg",
+      "sha256": "6165218936f4c778260f22d7d2779f14d0fe0c1348923e3f4b6db79464d5997f",
+      "judge": "翻转90",
+      "conf": 0.98,
+      "why": "人物横躺，天空日落位于右侧，地平线竖直",
+      "local_verdict": "正常",
+      "synthetic": false,
+      "note": "离线无重烧，帧仍为原始现场帧"
+    },
+    {
+      "category": "2-judge-found",
+      "sid": "shot15",
+      "round": "round2",
+      "frame": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\references\\t15-evidence-20261015\\2-judge-found\\round2_shot15.jpg",
+      "frame_win": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\references\\t15-evidence-20261015\\2-judge-found\\round2_shot15.jpg",
+      "source_frame": "E:\\每日新中国\\2026-10-15\\video\\每日新中国b站\\流水线\\daily-china-20261015\\_frames\\shot15.jpg",
+      "sha256": "96d457518232e71e11dd4a5eb5554a88677d9795abba5f73ffbfb044dc0a0fe5",
+      "judge": "翻转90",
+      "conf": 0.98,
+      "why": "人物横躺，海面竖直居中，天空在右缘",
+      "local_verdict": "正常",
+      "synthetic": false,
+      "note": "离线无重烧，帧仍为原始现场帧"
+    },
+    {
+      "category": "2-judge-found",
+      "sid": "shot18",
+      "round": "round2",
+      "frame": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\references\\t15-evidence-20261015\\2-judge-found\\round2_shot18.jpg",
+      "frame_win": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\references\\t15-evidence-20261015\\2-judge-found\\round2_shot18.jpg",
+      "source_frame": "E:\\每日新中国\\2026-10-15\\video\\每日新中国b站\\流水线\\daily-china-20261015\\_frames\\shot18.jpg",
+      "sha256": "0e603b5d3b2ce3a0d19d9836daa96d326fff4780dfa4cdaf3475aa689a6dcff7",
+      "judge": "翻转90",
+      "conf": 0.98,
+      "why": "军阵横躺，地面在左，天空在右",
+      "local_verdict": "正常",
+      "synthetic": false,
+      "note": "离线无重烧，帧仍为原始现场帧"
+    },
+    {
+      "category": "2-judge-found",
+      "sid": "shot19",
+      "round": "round2",
+      "frame": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\references\\t15-evidence-20261015\\2-judge-found\\round2_shot19.jpg",
+      "frame_win": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\references\\t15-evidence-20261015\\2-judge-found\\round2_shot19.jpg",
+      "source_frame": "E:\\每日新中国\\2026-10-15\\video\\每日新中国b站\\流水线\\daily-china-20261015\\_frames\\shot19.jpg",
+      "sha256": "d1ac29877358970ab691d057e0ae0debd93495a6c00b6d22b6fed5a33971566f",
+      "judge": "翻转90",
+      "conf": 0.97,
+      "why": "旗帜横倒，地面在左，天空在右",
+      "local_verdict": "正常",
+      "synthetic": false,
+      "note": "离线无重烧，帧仍为原始现场帧"
+    },
+    {
+      "category": "3-unfixed",
+      "sid": "shot03",
+      "round": "final",
+      "frame": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\references\\t15-evidence-20261015\\3-unfixed\\final_shot03.jpg",
+      "frame_win": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\references\\t15-evidence-20261015\\3-unfixed\\final_shot03.jpg",
+      "source_frame": "E:\\每日新中国\\2026-10-15\\video\\每日新中国b站\\流水线\\daily-china-20261015\\_frames\\shot03.jpg",
+      "sha256": "08ab5733806bd72403bbd098975e064df397cf8008f9c94e6414fa24adfffa98",
+      "judge": "翻转90",
+      "conf": 0.97,
+      "why": "地面在左缘竖条，天空在右，主体横躺",
+      "local_verdict": "正常",
+      "synthetic": false,
+      "note": "离线复现不烧卡：round1/2 无真实重烧帧，证据=判官三轮复判仍翻的原始现场帧；真机三轮素材归 T16 生产回合"
+    },
+    {
+      "category": "3-unfixed",
+      "sid": "shot09",
+      "round": "final",
+      "frame": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\references\\t15-evidence-20261015\\3-unfixed\\final_shot09.jpg",
+      "frame_win": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\references\\t15-evidence-20261015\\3-unfixed\\final_shot09.jpg",
+      "source_frame": "E:\\每日新中国\\2026-10-15\\video\\每日新中国b站\\流水线\\daily-china-20261015\\_frames\\shot09.jpg",
+      "sha256": "6165218936f4c778260f22d7d2779f14d0fe0c1348923e3f4b6db79464d5997f",
+      "judge": "翻转90",
+      "conf": 0.98,
+      "why": "人物横躺，天空日落位于右侧，地平线竖直",
+      "local_verdict": "正常",
+      "synthetic": false,
+      "note": "离线复现不烧卡：round1/2 无真实重烧帧，证据=判官三轮复判仍翻的原始现场帧；真机三轮素材归 T16 生产回合"
+    },
+    {
+      "category": "3-unfixed",
+      "sid": "shot15",
+      "round": "final",
+      "frame": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\references\\t15-evidence-20261015\\3-unfixed\\final_shot15.jpg",
+      "frame_win": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\references\\t15-evidence-20261015\\3-unfixed\\final_shot15.jpg",
+      "source_frame": "E:\\每日新中国\\2026-10-15\\video\\每日新中国b站\\流水线\\daily-china-20261015\\_frames\\shot15.jpg",
+      "sha256": "96d457518232e71e11dd4a5eb5554a88677d9795abba5f73ffbfb044dc0a0fe5",
+      "judge": "翻转90",
+      "conf": 0.98,
+      "why": "人物横躺，海面竖直居中，天空在右缘",
+      "local_verdict": "正常",
+      "synthetic": false,
+      "note": "离线复现不烧卡：round1/2 无真实重烧帧，证据=判官三轮复判仍翻的原始现场帧；真机三轮素材归 T16 生产回合"
+    },
+    {
+      "category": "3-unfixed",
+      "sid": "shot18",
+      "round": "final",
+      "frame": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\references\\t15-evidence-20261015\\3-unfixed\\final_shot18.jpg",
+      "frame_win": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\references\\t15-evidence-20261015\\3-unfixed\\final_shot18.jpg",
+      "source_frame": "E:\\每日新中国\\2026-10-15\\video\\每日新中国b站\\流水线\\daily-china-20261015\\_frames\\shot18.jpg",
+      "sha256": "0e603b5d3b2ce3a0d19d9836daa96d326fff4780dfa4cdaf3475aa689a6dcff7",
+      "judge": "翻转90",
+      "conf": 0.98,
+      "why": "军阵横躺，地面在左，天空在右",
+      "local_verdict": "正常",
+      "synthetic": false,
+      "note": "离线复现不烧卡：round1/2 无真实重烧帧，证据=判官三轮复判仍翻的原始现场帧；真机三轮素材归 T16 生产回合"
+    },
+    {
+      "category": "3-unfixed",
+      "sid": "shot19",
+      "round": "final",
+      "frame": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\references\\t15-evidence-20261015\\3-unfixed\\final_shot19.jpg",
+      "frame_win": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\references\\t15-evidence-20261015\\3-unfixed\\final_shot19.jpg",
+      "source_frame": "E:\\每日新中国\\2026-10-15\\video\\每日新中国b站\\流水线\\daily-china-20261015\\_frames\\shot19.jpg",
+      "sha256": "d1ac29877358970ab691d057e0ae0debd93495a6c00b6d22b6fed5a33971566f",
+      "judge": "翻转90",
+      "conf": 0.97,
+      "why": "旗帜横倒，地面在左，天空在右",
+      "local_verdict": "正常",
+      "synthetic": false,
+      "note": "离线复现不烧卡：round1/2 无真实重烧帧，证据=判官三轮复判仍翻的原始现场帧；真机三轮素材归 T16 生产回合"
+    },
+    {
+      "category": "1-confirmed",
+      "sid": "shot02rot90",
+      "round": "synthetic",
+      "frame": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\references\\t15-evidence-20261015\\1-confirmed\\synthetic_shot02rot90.jpg",
+      "frame_win": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\references\\t15-evidence-20261015\\1-confirmed\\synthetic_shot02rot90.jpg",
+      "source_frame": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\references\\t15-evidence-20261015\\1-confirmed\\synthetic_shot02rot90.jpg",
+      "sha256": "6927849e92c3e8eb923624ab1d364a08b7eedaa9f181f366c7180989414fb193",
+      "judge": "翻转90",
+      "conf": 0.97,
+      "why": "塔身横躺，天地在左右",
+      "local_verdict": "翻转90",
+      "synthetic": true,
+      "note": "构造样本（shot02 旋转），标签由构造保证；同批帧两轮判官结论一致"
+    },
+    {
+      "category": "1-confirmed",
+      "sid": "shot02rot180",
+      "round": "synthetic",
+      "frame": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\references\\t15-evidence-20261015\\1-confirmed\\synthetic_shot02rot180.jpg",
+      "frame_win": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\references\\t15-evidence-20261015\\1-confirmed\\synthetic_shot02rot180.jpg",
+      "source_frame": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\references\\t15-evidence-20261015\\1-confirmed\\synthetic_shot02rot180.jpg",
+      "sha256": "21a1847276266d6f8e6ccc51b885a80e2376a1537999191b62226fba95e5206a",
+      "judge": "翻转180",
+      "conf": 0.95,
+      "why": "塔尖朝下倒立，天空在下",
+      "local_verdict": "翻转180",
+      "synthetic": true,
+      "note": "构造样本（shot02 旋转），标签由构造保证；同批帧两轮判官结论一致"
+    }
+  ],
+  "judge_calls": [
+    {
+      "round": "round0",
+      "n": 19,
+      "ok": true,
+      "wall_s": 71.8,
+      "in_tok": 34842,
+      "out_tok": 2450,
+      "error": ""
+    },
+    {
+      "round": "round1",
+      "n": 5,
+      "ok": true,
+      "wall_s": 37.7,
+      "in_tok": 22870,
+      "out_tok": 867,
+      "error": ""
+    },
+    {
+      "round": "round2",
+      "n": 5,
+      "ok": true,
+      "wall_s": 41.0,
+      "in_tok": 14547,
+      "out_tok": 748,
+      "error": ""
+    },
+    {
+      "round": "synthetic-a",
+      "n": 3,
+      "ok": true,
+      "wall_s": 25.8,
+      "in_tok": 11353,
+      "out_tok": 362,
+      "error": ""
+    },
+    {
+      "round": "synthetic-b",
+      "n": 3,
+      "ok": true,
+      "wall_s": 77.4,
+      "in_tok": 9433,
+      "out_tok": 2111,
+      "error": ""
+    }
+  ],
+  "negative_control": [],
+  "dataset_patches": {
+    "shot01": {
+      "judge_verdict": "正常",
+      "judge_conf": 0.95,
+      "judge_why": "天空在上，飞檐重楼地平线水平",
+      "judge_rounds": [
+        {
+          "round": "round0",
+          "local": "正常",
+          "judge": "正常",
+          "kind": "judge_normal",
+          "conf": 0.95,
+          "why": "天空在上，飞檐重楼地平线水平"
+        }
+      ]
+    },
+    "shot02": {
+      "judge_verdict": "正常",
+      "judge_conf": 0.95,
+      "judge_why": "塔身竖直，天空在上云海在下",
+      "judge_rounds": [
+        {
+          "round": "round0",
+          "local": "正常",
+          "judge": "正常",
+          "kind": "judge_normal",
+          "conf": 0.95,
+          "why": "塔身竖直，天空在上云海在下"
+        }
+      ]
+    },
+    "shot03": {
+      "judge_verdict": "翻转90",
+      "judge_conf": 0.97,
+      "judge_why": "地面在左缘竖条，天空在右，主体横躺",
+      "judge_flip_rounds": [
+        "round0",
+        "round1",
+        "round2"
+      ],
+      "judge_rounds": [
+        {
+          "round": "round0",
+          "local": "正常",
+          "judge": "翻转90",
+          "kind": "judge_found",
+          "conf": 0.9,
+          "why": "地面在左天空在右，亭台横躺"
+        },
+        {
+          "round": "round1",
+          "local": "正常",
+          "judge": "翻转90",
+          "kind": "judge_found",
+          "conf": 0.95,
+          "why": "石台竖直在左，云天在右，人物横躺"
+        },
+        {
+          "round": "round2",
+          "local": "正常",
+          "judge": "翻转90",
+          "kind": "judge_found",
+          "conf": 0.97,
+          "why": "地面在左缘竖条，天空在右，主体横躺"
+        }
+      ]
+    },
+    "shot04": {
+      "judge_verdict": "正常",
+      "judge_conf": 0.95,
+      "judge_why": "穹顶在上台阶在下，人物站立",
+      "judge_rounds": [
+        {
+          "round": "round0",
+          "local": "正常",
+          "judge": "正常",
+          "kind": "judge_normal",
+          "conf": 0.95,
+          "why": "穹顶在上台阶在下，人物站立"
+        }
+      ]
+    },
+    "shot05": {
+      "judge_verdict": "正常",
+      "judge_conf": 0.95,
+      "judge_why": "天空山峦在上，人物立于平台",
+      "judge_rounds": [
+        {
+          "round": "round0",
+          "local": "正常",
+          "judge": "正常",
+          "kind": "judge_normal",
+          "conf": 0.95,
+          "why": "天空山峦在上，人物立于平台"
+        }
+      ]
+    },
+    "shot06": {
+      "judge_verdict": "正常",
+      "judge_conf": 0.95,
+      "judge_why": "天空在上麦田在下，地平线水平",
+      "judge_rounds": [
+        {
+          "round": "round0",
+          "local": "正常",
+          "judge": "正常",
+          "kind": "judge_normal",
+          "conf": 0.95,
+          "why": "天空在上麦田在下，地平线水平"
+        }
+      ]
+    },
+    "shot07": {
+      "judge_verdict": "正常",
+      "judge_conf": 0.95,
+      "judge_why": "殿门朝上开，立柱竖直",
+      "judge_rounds": [
+        {
+          "round": "round0",
+          "local": "正常",
+          "judge": "正常",
+          "kind": "judge_normal",
+          "conf": 0.95,
+          "why": "殿门朝上开，立柱竖直"
+        }
+      ]
+    },
+    "shot08": {
+      "judge_verdict": "正常",
+      "judge_conf": 0.95,
+      "judge_why": "天空在上棉田在下，无人机正常悬飞",
+      "judge_rounds": [
+        {
+          "round": "round0",
+          "local": "正常",
+          "judge": "正常",
+          "kind": "judge_normal",
+          "conf": 0.95,
+          "why": "天空在上棉田在下，无人机正常悬飞"
+        }
+      ]
+    },
+    "shot09": {
+      "judge_verdict": "翻转90",
+      "judge_conf": 0.98,
+      "judge_why": "人物横躺，天空日落位于右侧，地平线竖直",
+      "judge_flip_rounds": [
+        "round0",
+        "round1",
+        "round2"
+      ],
+      "judge_rounds": [
+        {
+          "round": "round0",
+          "local": "正常",
+          "judge": "翻转90",
+          "kind": "judge_found",
+          "conf": 0.92,
+          "why": "天空在右，人物棉花横向躺倒"
+        },
+        {
+          "round": "round1",
+          "local": "正常",
+          "judge": "翻转90",
+          "kind": "judge_found",
+          "conf": 0.97,
+          "why": "棉田在左，天空落日在右，人物横躺"
+        },
+        {
+          "round": "round2",
+          "local": "正常",
+          "judge": "翻转90",
+          "kind": "judge_found",
+          "conf": 0.98,
+          "why": "人物横躺，天空日落位于右侧，地平线竖直"
+        }
+      ]
+    },
+    "shot10": {
+      "judge_verdict": "正常",
+      "judge_conf": 0.95,
+      "judge_why": "楼阁在上场地在下，灯笼竖挂",
+      "judge_rounds": [
+        {
+          "round": "round0",
+          "local": "正常",
+          "judge": "正常",
+          "kind": "judge_normal",
+          "conf": 0.95,
+          "why": "楼阁在上场地在下，灯笼竖挂"
+        }
+      ]
+    },
+    "shot11": {
+      "judge_verdict": "正常",
+      "judge_conf": 0.9,
+      "judge_why": "卷轴竖持，球场远景地平线水平",
+      "judge_rounds": [
+        {
+          "round": "round0",
+          "local": "正常",
+          "judge": "正常",
+          "kind": "judge_normal",
+          "conf": 0.9,
+          "why": "卷轴竖持，球场远景地平线水平"
+        }
+      ]
+    },
+    "shot12": {
+      "judge_verdict": "正常",
+      "judge_conf": 0.95,
+      "judge_why": "天空在上管线延伸向远方",
+      "judge_rounds": [
+        {
+          "round": "round0",
+          "local": "正常",
+          "judge": "正常",
+          "kind": "judge_normal",
+          "conf": 0.95,
+          "why": "天空在上管线延伸向远方"
+        }
+      ]
+    },
+    "shot13": {
+      "judge_verdict": "正常",
+      "judge_conf": 0.95,
+      "judge_why": "铁塔竖直向上，天空在上",
+      "judge_rounds": [
+        {
+          "round": "round0",
+          "local": "正常",
+          "judge": "正常",
+          "kind": "judge_normal",
+          "conf": 0.95,
+          "why": "铁塔竖直向上，天空在上"
+        }
+      ]
+    },
+    "shot14": {
+      "judge_verdict": "正常",
+      "judge_conf": 0.95,
+      "judge_why": "海平线水平，天空在上建筑在下",
+      "judge_rounds": [
+        {
+          "round": "round0",
+          "local": "正常",
+          "judge": "正常",
+          "kind": "judge_normal",
+          "conf": 0.95,
+          "why": "海平线水平，天空在上建筑在下"
+        }
+      ]
+    },
+    "shot15": {
+      "judge_verdict": "翻转90",
+      "judge_conf": 0.98,
+      "judge_why": "人物横躺，海面竖直居中，天空在右缘",
+      "judge_flip_rounds": [
+        "round0",
+        "round1",
+        "round2"
+      ],
+      "judge_rounds": [
+        {
+          "round": "round0",
+          "local": "正常",
+          "judge": "翻转90",
+          "kind": "judge_found",
+          "conf": 0.9,
+          "why": "海面竖向，两人横躺，天空在右"
+        },
+        {
+          "round": "round1",
+          "local": "正常",
+          "judge": "翻转90",
+          "kind": "judge_found",
+          "conf": 0.97,
+          "why": "海面竖直居中，天空在右，人物横躺"
+        },
+        {
+          "round": "round2",
+          "local": "正常",
+          "judge": "翻转90",
+          "kind": "judge_found",
+          "conf": 0.98,
+          "why": "人物横躺，海面竖直居中，天空在右缘"
+        }
+      ]
+    },
+    "shot16": {
+      "judge_verdict": "正常",
+      "judge_conf": 0.95,
+      "judge_why": "海天在上，罗盘竖持船身正立",
+      "judge_rounds": [
+        {
+          "round": "round0",
+          "local": "正常",
+          "judge": "正常",
+          "kind": "judge_normal",
+          "conf": 0.95,
+          "why": "海天在上，罗盘竖持船身正立"
+        }
+      ]
+    },
+    "shot17": {
+      "judge_verdict": "正常",
+      "judge_conf": 0.95,
+      "judge_why": "雪山在上军阵立于地面",
+      "judge_rounds": [
+        {
+          "round": "round0",
+          "local": "正常",
+          "judge": "正常",
+          "kind": "judge_normal",
+          "conf": 0.95,
+          "why": "雪山在上军阵立于地面"
+        }
+      ]
+    },
+    "shot18": {
+      "judge_verdict": "翻转90",
+      "judge_conf": 0.98,
+      "judge_why": "军阵横躺，地面在左，天空在右",
+      "judge_flip_rounds": [
+        "round0",
+        "round1",
+        "round2"
+      ],
+      "judge_rounds": [
+        {
+          "round": "round0",
+          "local": "正常",
+          "judge": "翻转90",
+          "kind": "judge_found",
+          "conf": 0.92,
+          "why": "地面在左天空在右，士兵横躺"
+        },
+        {
+          "round": "round1",
+          "local": "正常",
+          "judge": "翻转90",
+          "kind": "judge_found",
+          "conf": 0.97,
+          "why": "地面城墙在左，天空在右，士兵横躺"
+        },
+        {
+          "round": "round2",
+          "local": "正常",
+          "judge": "翻转90",
+          "kind": "judge_found",
+          "conf": 0.98,
+          "why": "军阵横躺，地面在左，天空在右"
+        }
+      ]
+    },
+    "shot19": {
+      "judge_verdict": "翻转90",
+      "judge_conf": 0.97,
+      "judge_why": "旗帜横倒，地面在左，天空在右",
+      "judge_flip_rounds": [
+        "round0",
+        "round1",
+        "round2"
+      ],
+      "judge_rounds": [
+        {
+          "round": "round0",
+          "local": "正常",
+          "judge": "翻转90",
+          "kind": "judge_found",
+          "conf": 0.92,
+          "why": "天空在左，士兵旗帜横向倒伏"
+        },
+        {
+          "round": "round1",
+          "local": "正常",
+          "judge": "翻转90",
+          "kind": "judge_found",
+          "conf": 0.97,
+          "why": "草地在左，云天在右，军阵横躺"
+        },
+        {
+          "round": "round2",
+          "local": "正常",
+          "judge": "翻转90",
+          "kind": "judge_found",
+          "conf": 0.97,
+          "why": "旗帜横倒，地面在左，天空在右"
+        }
+      ]
+    }
+  }
+}

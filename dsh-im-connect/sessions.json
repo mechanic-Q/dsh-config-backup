@@ -1,0 +1,13 @@
+{
+  "feishu_439061570ff1:dm:oc_fe93d8a7614afd2a66dc520083966b78": {
+    "sessionId": "im:feishu_439061570ff1:dm:1792079908966:oc_fe93d8a7614afd2a66dc520083966b78",
+    "channel": "feishu_439061570ff1",
+    "kind": "dm",
+    "chatId": "oc_fe93d8a7614afd2a66dc520083966b78",
+    "title": "hi",
+    "titleSource": "host",
+    "agentPreset": "standard",
+    "cwd": "C:\\Users\\LMR\\Documents\\deepseek-harness\\default-workspace",
+    "updatedAt": "2026-10-15T15:58:32.339Z"
+  }
+}

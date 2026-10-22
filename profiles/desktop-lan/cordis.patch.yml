@@ -1,0 +1,309 @@
+# Your patch layer for this dsh profile, applied after every bundle layer:
+# a top-level YAML array of loader patch entries (id-targeted config
+# overrides, disables, and insert lists; `!!js` expressions allowed).
+- id: agent-default-model
+  name: "@deepseek-ai/dsh-agent-default-model"
+  config:
+    provider: workbuddy
+    model: deepseek-v4.1-flash
+    reasoningEffort: high
+- id: ui-settings-account
+  name: "@deepseek-ai/dsh-client-ui-settings-account"
+  config:
+    version: 1
+    step: done
+    purpose: development
+    process: detailed
+    completion: completed
+    usage: detailed
+    developerTools: true
+- id: ui-chat
+  name: "@deepseek-ai/dsh-client-ui-chat"
+  config:
+    transcriptView: detailed
+    performanceUsage: detailed
+- id: ui-settings
+  name: "@deepseek-ai/dsh-client-ui-settings"
+  config:
+    enabled: true
+- id: model-proxy
+  name: dsh-plugin-model-proxy
+  config:
+    catalog:
+      providers:
+        - provider: deepseek-official
+          active: true
+          displayName: DeepSeek
+        - provider: deepseek-account
+          active: true
+          displayName: DeepSeek Account
+        - provider: amazon-bedrock
+          active: false
+          displayName: amazon-bedrock
+        - provider: ant-ling
+          active: false
+          displayName: ant-ling
+        - provider: anthropic
+          active: false
+          displayName: anthropic
+        - provider: azure
+          active: false
+          displayName: azure
+        - provider: baseten
+          active: false
+          displayName: baseten
+        - provider: cerebras
+          active: false
+          displayName: cerebras
+        - provider: cloudflare-ai-gateway
+          active: false
+          displayName: cloudflare-ai-gateway
+        - provider: cloudflare-workers-ai
+          active: false
+          displayName: cloudflare-workers-ai
+        - provider: deepseek
+          active: false
+          displayName: deepseek
+        - provider: fireworks
+          active: false
+          displayName: fireworks
+        - provider: github-copilot
+          active: false
+          displayName: github-copilot
+        - provider: google
+          active: false
+          displayName: google
+        - provider: google-vertex
+          active: false
+          displayName: google-vertex
+        - provider: groq
+          active: false
+          displayName: groq
+        - provider: huggingface
+          active: false
+          displayName: huggingface
+        - provider: kimi-coding
+          active: false
+          displayName: kimi-coding
+        - provider: meta
+          active: false
+          displayName: meta
+        - provider: minimax
+          active: true
+          displayName: minimax
+        - provider: minimax-cn
+          active: false
+          displayName: minimax-cn
+        - provider: mistral
+          active: false
+          displayName: mistral
+        - provider: moonshotai
+          active: false
+          displayName: moonshotai
+        - provider: moonshotai-cn
+          active: false
+          displayName: moonshotai-cn
+        - provider: nvidia
+          active: false
+          displayName: nvidia
+        - provider: openai
+          active: false
+          displayName: openai
+        - provider: openai-codex
+          active: false
+          displayName: openai-codex
+        - provider: opencode
+          active: false
+          displayName: opencode
+        - provider: opencode-go
+          active: false
+          displayName: opencode-go
+        - provider: openrouter
+          active: false
+          displayName: openrouter
+        - provider: qwen-token-plan
+          active: false
+          displayName: qwen-token-plan
+        - provider: qwen-token-plan-cn
+          active: false
+          displayName: qwen-token-plan-cn
+        - provider: qwen-token-plan-individual
+          active: false
+          displayName: qwen-token-plan-individual
+        - provider: radius
+          active: false
+          displayName: radius
+        - provider: together
+          active: false
+          displayName: together
+        - provider: vercel-ai-gateway
+          active: false
+          displayName: vercel-ai-gateway
+        - provider: xai
+          active: false
+          displayName: xai
+        - provider: xiaomi
+          active: false
+          displayName: xiaomi
+        - provider: xiaomi-token-plan-ams
+          active: false
+          displayName: xiaomi-token-plan-ams
+        - provider: xiaomi-token-plan-cn
+          active: false
+          displayName: xiaomi-token-plan-cn
+        - provider: xiaomi-token-plan-sgp
+          active: false
+          displayName: xiaomi-token-plan-sgp
+        - provider: zai
+          active: false
+          displayName: zai
+        - provider: zai-coding-cn
+          active: false
+          displayName: zai-coding-cn
+        - provider: our-free-model
+          active: true
+          displayName: Our Free Model
+        - provider: codearts
+          active: true
+          displayName: CodeArts Agent
+        - provider: buddy
+          active: true
+          displayName: CodeBuddy (腾讯)
+        - provider: workbuddy
+          active: true
+          displayName: WorkBuddy (国际版)
+        - provider: lobsterai
+          active: true
+          displayName: LobsterAI (有道)
+        - provider: qoder
+          active: true
+          displayName: Qoder
+        - provider: qodercn
+          active: true
+          displayName: Qoder (中国版)
+        - provider: trae
+          active: true
+          displayName: TRAE (字节)
+        - provider: cline
+          active: true
+          displayName: Cline
+        - provider: loomy
+          active: true
+          displayName: Loomy (讯飞)
+        - provider: raccoon
+          active: true
+          displayName: Raccoon (商汤)
+        - provider: gemini
+          active: true
+          displayName: Gemini Code Assist
+        - provider: zcode
+          active: true
+          displayName: ZCode (智谱)
+      models: []
+- id: remote-web-ui
+  name: '@linxin666/dsh-remote-web-ui'
+  disabled: false
+  config:
+    lanBind: true
+    autoTunnel: false
+    relay: false
+    tokenTtlMs: 1800000
+    maxDevices: 8
+- id: dsh-ops-ptc
+  disabled: false
+
+# --- pin DeepSeek Search / Fetch API as the web providers ---
+# dsh-web replaces the WHOLE config row, so both keys must be listed together.
+- id: web
+  config:
+    searchProvider: deepseek-search-api
+    fetchProvider: deepseek-fetch-api
+
+# --- 单次搜索的结果条数：内置 tool-web 默认只留 8 条，provider 又默认只要 10 条，
+# 所以这两处必须一起调（任一处的较小值生效）。searchTimeoutMs 因整行替换必须带上。---
+- id: tool-web
+  config:
+    fetch: true
+    searchTimeoutMs: 60000
+    searchMaxResults: 15
+- id: web-deepseek-api
+  config:
+    apiKeyEnv: DEEPSEEK_API_KEY
+    count: 15
+- id: permission
+  name: "@deepseek-ai/dsh-permission-presets"
+  config:
+    presets:
+      read-only:
+        sandbox: read-only
+        approval: ask
+      workspace-write:
+        sandbox: workspace-write
+        approval: ask
+      danger-full-access:
+        sandbox: danger-full-access
+        approval: never
+    defaultPreset: danger-full-access
+
+# ===================== 插件收敛 2026-10-18 =====================
+# 决策依据: 优先级 C(不静默出错) > B(一域一主人) > A(省 token)。
+# 回滚: 删掉本段即可；改前快照 20261018-213318-481d。
+# 生效: 需重启 DSH（desktop 应用）。
+
+# 1) 会话标题: codex-ui 用 prototype 改写 sessionTitle.register 静默屏蔽官方标题，
+#    关掉它的标题行 → 标题回归 core 官方 LLM，不再有静默接管。
+
+# 2) 浏览器: 只关 agent 侧 34 个 dsh_browser_* 工具行（6.3K tok，4 天调 1 次）。
+#    browser seam 与侧栏浏览器仍由 browser/browser-electron 两行提供，人工照常可用。
+- id: tool-browser
+  disabled: true
+
+# 3) 搜索: profile 已把 searchProvider 钉死 deepseek-search-api，
+#    free-search 只打警告、不干活，却注册 10 工具并注入 7.7KB 宣传段。
+
+# 4) 编排: ralph / PUA 已被 agent-team + task-board 覆盖（4 天 0 次）。
+- id: optional-ralph
+  disabled: true
+
+# 5) 哑弹: browser-skill（bsk CLI 缺失）、modlens（modlens CLI 缺失）。
+- id: modlens
+  disabled: true
+
+# 6) univer: 25 个工具 4 天 0 次，占 216MB + 3.2K tok。
+#    默认关；要用时把本行改 false（或删掉这三行）再重启。
+- id: univer
+  disabled: true
+- id: agent-preset-registry
+  name: "@deepseek-ai/dsh-agent-preset-registry"
+  config:
+    default: standard
+    selectedDefault: ptc
+- id: dsh-context
+  disabled: false
+- id: agency-agents-remote
+  disabled: true
+- id: agency-agents
+  disabled: true
+- id: ui-settings-general
+  name: "@deepseek-ai/dsh-client-ui-settings-general"
+  config:
+    welcomeNoticeVersion: 2026-09-28.1
+- id: tool-wsl
+  disabled: false
+- id: plugin-market
+  name: "@deepseek-ai/dsh-plugin-market"
+  config:
+    indexes:
+      - https://dshopen.org/index.json
+
+# --- remote-web-ui lan-bind block (managed - do not edit) ---
+- id: webserver
+  name: '@deepseek-ai/dsh-host-webserver'
+  config:
+    host: '192.168.50.231'
+    port: 3097
+    compression: gzip
+    compressionLevel: 1
+    compressionThresholdBytes: 1024
+
+# --- end remote-web-ui lan-bind block ---

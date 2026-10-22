@@ -1,0 +1,18 @@
+{
+  "temperature": 40.4295,
+  "model": "qwen3-vl-4b",
+  "calibrated_at": "2026-10-14T16:51:29",
+  "n_samples": 56,
+  "n_rows": 34,
+  "n_flip_frames": 36,
+  "n_normal_frames": 20,
+  "nll_before": 9.7627,
+  "nll_after": 1.068,
+  "ece_before": 0.6121,
+  "ece_after": 0.1447,
+  "gate": {
+    "hi": 0.9,
+    "lo": 0.6
+  },
+  "note": "user_flagged 真值帧级样本；倾斜类无独立真值（NLL 隐式压低）"
+}

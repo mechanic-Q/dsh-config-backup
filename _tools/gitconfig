@@ -1,0 +1,10 @@
+[user]
+	name = mechanic-Q
+	email = sp-mr@163.com
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[credential]
+	helper = manager

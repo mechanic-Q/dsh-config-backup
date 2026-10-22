@@ -1,0 +1,440 @@
+# Your patch layer for this dsh profile, applied after every bundle layer:
+# a top-level YAML array of loader patch entries (id-targeted config
+# overrides, disables, and insert lists; `!!js` expressions allowed).
+- id: agent-default-model
+  name: "@deepseek-ai/dsh-agent-default-model"
+  config:
+    provider: api-key-20260904000920
+    model: deepseek-v4.1-flash-economy
+    reasoningEffort: high
+- id: ui-settings-account
+  name: "@deepseek-ai/dsh-client-ui-settings-account"
+  config:
+    version: 1
+    step: done
+    purpose: development
+    process: detailed
+    completion: completed
+    usage: detailed
+    developerTools: true
+- id: ui-chat
+  name: "@deepseek-ai/dsh-client-ui-chat"
+  config:
+    transcriptView: detailed
+    performanceUsage: detailed
+- id: ui-settings
+  name: "@deepseek-ai/dsh-client-ui-settings"
+  config:
+    enabled: true
+- id: model-proxy
+  name: dsh-plugin-model-proxy
+  config:
+    catalog:
+      providers:
+        - provider: deepseek-official
+          active: true
+          displayName: DeepSeek
+        - provider: deepseek-account
+          active: true
+          displayName: DeepSeek Account
+        - provider: amazon-bedrock
+          active: false
+          displayName: amazon-bedrock
+        - provider: ant-ling
+          active: false
+          displayName: ant-ling
+        - provider: anthropic
+          active: false
+          displayName: anthropic
+        - provider: azure
+          active: false
+          displayName: azure
+        - provider: baseten
+          active: false
+          displayName: baseten
+        - provider: cerebras
+          active: false
+          displayName: cerebras
+        - provider: cloudflare-ai-gateway
+          active: false
+          displayName: cloudflare-ai-gateway
+        - provider: cloudflare-workers-ai
+          active: false
+          displayName: cloudflare-workers-ai
+        - provider: deepseek
+          active: false
+          displayName: deepseek
+        - provider: fireworks
+          active: false
+          displayName: fireworks
+        - provider: github-copilot
+          active: false
+          displayName: github-copilot
+        - provider: google
+          active: false
+          displayName: google
+        - provider: google-vertex
+          active: false
+          displayName: google-vertex
+        - provider: groq
+          active: false
+          displayName: groq
+        - provider: huggingface
+          active: false
+          displayName: huggingface
+        - provider: kimi-coding
+          active: false
+          displayName: kimi-coding
+        - provider: meta
+          active: false
+          displayName: meta
+        - provider: minimax
+          active: true
+          displayName: minimax
+        - provider: minimax-cn
+          active: false
+          displayName: minimax-cn
+        - provider: mistral
+          active: false
+          displayName: mistral
+        - provider: moonshotai
+          active: false
+          displayName: moonshotai
+        - provider: moonshotai-cn
+          active: false
+          displayName: moonshotai-cn
+        - provider: nvidia
+          active: false
+          displayName: nvidia
+        - provider: openai
+          active: false
+          displayName: openai
+        - provider: openai-codex
+          active: false
+          displayName: openai-codex
+        - provider: opencode
+          active: false
+          displayName: opencode
+        - provider: opencode-go
+          active: false
+          displayName: opencode-go
+        - provider: openrouter
+          active: false
+          displayName: openrouter
+        - provider: qwen-token-plan
+          active: false
+          displayName: qwen-token-plan
+        - provider: qwen-token-plan-cn
+          active: false
+          displayName: qwen-token-plan-cn
+        - provider: qwen-token-plan-individual
+          active: false
+          displayName: qwen-token-plan-individual
+        - provider: radius
+          active: false
+          displayName: radius
+        - provider: together
+          active: false
+          displayName: together
+        - provider: vercel-ai-gateway
+          active: false
+          displayName: vercel-ai-gateway
+        - provider: xai
+          active: false
+          displayName: xai
+        - provider: xiaomi
+          active: false
+          displayName: xiaomi
+        - provider: xiaomi-token-plan-ams
+          active: false
+          displayName: xiaomi-token-plan-ams
+        - provider: xiaomi-token-plan-cn
+          active: false
+          displayName: xiaomi-token-plan-cn
+        - provider: xiaomi-token-plan-sgp
+          active: false
+          displayName: xiaomi-token-plan-sgp
+        - provider: zai
+          active: false
+          displayName: zai
+        - provider: zai-coding-cn
+          active: false
+          displayName: zai-coding-cn
+        - provider: api-key-20260904000920
+          active: true
+          displayName: ark
+        - provider: our-free-model
+          active: true
+          displayName: Our Free Model
+        - provider: codearts
+          active: true
+          displayName: CodeArts Agent
+        - provider: lobsterai
+          active: true
+          displayName: LobsterAI (有道)
+        - provider: qoder
+          active: true
+          displayName: Qoder
+        - provider: qodercn
+          active: true
+          displayName: Qoder (中国版)
+        - provider: trae
+          active: true
+          displayName: TRAE (字节)
+        - provider: cline
+          active: true
+          displayName: Cline
+        - provider: loomy
+          active: true
+          displayName: Loomy (讯飞)
+        - provider: raccoon
+          active: true
+          displayName: Raccoon (商汤)
+        - provider: gemini
+          active: true
+          displayName: Gemini Code Assist
+        - provider: zcode
+          active: true
+          displayName: ZCode (智谱)
+      models: []
+- id: remote-web-ui
+  name: '@linxin666/dsh-remote-web-ui'
+  disabled: false
+  config:
+    lanBind: true
+    autoTunnel: false
+    relay: false
+    tokenTtlMs: 1800000
+    maxDevices: 8
+- id: dsh-ops-ptc
+  disabled: false
+
+# --- remote-web-ui lan-bind block (managed - do not edit) ---
+- id: webserver
+  name: '@deepseek-ai/dsh-host-webserver'
+  config:
+    host: '127.0.0.1'
+    port: 0
+    compression: gzip
+    compressionLevel: 1
+    compressionThresholdBytes: 1024
+
+# --- end remote-web-ui lan-bind block ---
+
+# --- web providers: AnySearch（2026-10-20 起接管搜索+抓取）---
+# dsh-web replaces the WHOLE config row, so both keys must be listed together.
+# 切回官方只改这两行为 deepseek-search-api / deepseek-fetch-api，
+# 或临时 export DSH_WEB_SEARCH_PROVIDER=deepseek-search-api 覆盖。
+- id: web
+  config:
+    searchProvider: anysearch
+    fetchProvider: anysearch
+
+# --- 单次搜索的结果条数：内置 tool-web 默认只留 8 条，provider 又默认只要 10 条，
+# 所以这两处必须一起调（任一处的较小值生效）。searchTimeoutMs 因整行替换必须带上。---
+- id: tool-web
+  config:
+    fetch: true
+    searchTimeoutMs: 60000
+    searchMaxResults: 15
+- id: web-deepseek-api
+  config:
+    apiKeyEnv: DEEPSEEK_API_KEY
+    count: 15
+
+# --- AnySearch：免 key 匿名档 1000 次/天。填了 ANYSEARCH_API_KEY 才走注册额度；
+# 注意无效 key 不降级（直接 401），不确定就别填，留空即匿名。---
+- id: web-search-anysearch
+  name: "@anysearch/anysearch-dsh"
+  config:
+    apiKeyEnv: ANYSEARCH_API_KEY
+    # 默认 12000 字符，会把长文档（pypi 43KB）截掉三分之二。抬到 60000 覆盖绝大多数文档页；
+    # 真正的硬上限在 tool-web 的 fetchMaxOutputChars（默认 200000），不会冲突。
+    maxRenderedContentChars: 60000
+
+# --- dsh-free-search：27 引擎 / 13 平台 / 41 垂直源，不改 searchProvider（运行时只在
+# 未设或仍是 deepseek-official 时接管；这里已显式 anysearch，它只 warn 不动手）。---
+- id: web-search-free
+  name: dsh-free-search
+  config:
+    provider: bing
+    bingMarket: zh-CN
+    # 本机 SearXNG（Docker，实际端口 28888 不是 8888）；上游 brave/ddg/google 常被墙或 CAPTCHA，
+    # 靠 bing 兜住。实例不可达时插件自动跳过，不影响主链路。
+    searxngInstances:
+      - "http://127.0.0.1:28888"
+    # 2026-10-21 实测后收窄回退链。默认链有 25 个引擎，其中十几个是 fail[auth]（无 key），
+    # 每次搜索要先烧一遍才轮到能用的。这里只留**实测能出结果的 7 个**：
+    #   exa/tavily/keenable/firecrawl/parallel —— 免 key 匿名档（free_search_test 全绿）
+    #   bing —— 稳定兜底；anysearch —— 中文最强
+    # 砍掉：ddg/ddg-lite（bot-wall）、perplexity/serpbase/serply/you/baidu/kimi/aliyun/doubao/
+    #       tinyfish/jina/zhihu_*（全部 fail[auth]）、deepseek-tools/official（quota）、searxng（单独跑 0 命中）
+    fallbackOrder:
+      - anysearch
+      - bing
+      - exa
+      - tavily
+      - keenable
+      - firecrawl
+      - parallel
+    # 只留真正需要的引擎；其余显式禁用，避免任何路径再去试它们。
+    disabledEngines:
+      - ddg
+      - ddg-lite
+      - searxng
+      - perplexity
+      - serpbase
+      - serply
+      - you
+      - baidu
+      - kimi
+      - aliyun
+      - doubao
+      - tinyfish
+      - jina
+      - zhihu_global
+      - zhihu_site
+      - deepseek-official
+      - deepseek-tools
+
+# --- deep-search 编排层：四档开关见 ~/.dsh/procedures/检索-deep-search编排层.md ---
+# alwaysSearch:false → 不再默认接管所有联网问题；promptInjection:true → 保留提示让我知道它存在。
+- id: deep-search
+  name: dsh-deep-search
+  config:
+    alwaysSearch: false
+    promptInjection: true
+    maxRounds: 5
+    budgetChars: 8000
+    # 2026-10-21 实测：18 个免 key target 只有 7 个真出结果。
+    # 砍掉 5 个必失败（reddit 403 / v2ex 404 / bilibili malformed / weibo 登录墙 / x 无访问）
+    # 与 6 个「成功但 0 命中」的（ddg / ddg-lite / searxng / mojeek / firecrawl-keyless / stackoverflow）。
+    # 2026-10-21 追加 tavily，并定为链首：引擎是链式的，第一个出结果的答完整轮；
+    # bing 对英文技术词几乎总有「噪音命中」（查 nuke compositing 返回核爆模拟器），
+    # 放链首会让 tavily 永不触发。tavily 命中率 4/6 vs bing 0/8，故 tavily 先、
+    # bing 只作 tavily 失败/0 命中时的兜底。成本 1 credit/查询（1000/月 ≈ 100 次深检索）。
+    enabledEngines:
+      - tavily
+      - bing
+    enabledPlatforms:
+      - github
+      - hackernews
+      - npm
+      - huggingface
+      - modelscope
+      - wikipedia
+    searxngInstances:
+      - "http://127.0.0.1:28888"
+- id: permission
+  name: "@deepseek-ai/dsh-permission-presets"
+  config:
+    presets:
+      read-only:
+        sandbox: read-only
+        approval: ask
+      workspace-write:
+        sandbox: workspace-write
+        approval: ask
+      danger-full-access:
+        sandbox: danger-full-access
+        approval: never
+    defaultPreset: danger-full-access
+
+# ===================== 插件收敛 2026-10-18 =====================
+# 决策依据: 优先级 C(不静默出错) > B(一域一主人) > A(省 token)。
+# 回滚: 删掉本段即可；改前快照 20261018-213318-481d。
+# 生效: 需重启 DSH（desktop 应用）。
+
+# 1) 会话标题: codex-ui 用 prototype 改写 sessionTitle.register 静默屏蔽官方标题，
+#    关掉它的标题行 → 标题回归 core 官方 LLM，不再有静默接管。
+
+# 2) 浏览器: 只关 agent 侧 34 个 dsh_browser_* 工具行（6.3K tok，4 天调 1 次）。
+#    browser seam 与侧栏浏览器仍由 browser/browser-electron 两行提供，人工照常可用。
+- id: tool-browser
+  disabled: true
+
+# 3) 搜索: profile 已把 searchProvider 钉死 deepseek-search-api，
+#    free-search 只打警告、不干活，却注册 10 工具并注入 7.7KB 宣传段。
+
+# 4) 编排: ralph / PUA 已被 agent-team + task-board 覆盖（4 天 0 次）。
+- id: optional-ralph
+  disabled: true
+
+# 5) 哑弹: browser-skill（bsk CLI 缺失）、modlens（modlens CLI 缺失）。
+- id: modlens
+  disabled: true
+
+# 6) univer: 25 个工具 4 天 0 次，占 216MB + 3.2K tok。
+#    默认关；要用时把本行改 false（或删掉这三行）再重启。
+- id: univer
+  disabled: true
+- id: agent-preset-registry
+  name: "@deepseek-ai/dsh-agent-preset-registry"
+  config:
+    default: standard
+    selectedDefault: standard
+- id: dsh-context
+  disabled: false
+- id: agency-agents-remote
+  disabled: true
+- id: agency-agents
+  disabled: true
+- id: ui-settings-general
+  name: "@deepseek-ai/dsh-client-ui-settings-general"
+  config:
+    welcomeNoticeVersion: 2026-09-28.1
+- id: tool-wsl
+  disabled: false
+- id: plugin-market
+  name: "@deepseek-ai/dsh-plugin-market"
+  config:
+    indexes:
+      - https://dshopen.org/index.json
+- id: llm-pi-ai
+  name: "@deepseek-ai/dsh-llm-pi-ai"
+  config:
+    providers:
+      api-key-20260904000920:
+        displayName: ark
+        apiKeyEnv: API_KEY_20260904000920_API_KEY
+        api: anthropic-messages
+        baseURL: https://ark.cn-beijing.volces.com/api/coding
+        models:
+          - id: deepseek-v4.1-flash-economy
+            name: deepseek-v4.1-flash-economy
+            input: [ text, image ]
+            contextWindow: 1048576
+            maxTokens: 393216
+            reasoningEfforts:
+              off: "none"
+              low: "low"
+              medium: "medium"
+              high: "high"
+          - id: deepseek-v4.1-flash
+            name: deepseek-v4.1-flash
+            input: [ text, image ]
+            contextWindow: 1048576
+            maxTokens: 393216
+            reasoningEfforts: { off: "none", low: "low", medium: "medium", high: "high" }
+          - id: glm-5.3-flash
+            name: glm-5.3-flash
+            input: [ text, image ]
+            contextWindow: 1048576
+            maxTokens: 131072
+            reasoningEfforts: { off: "none", low: "low", medium: "medium", high: "high" }
+          - id: glm-5.3
+            name: glm-5.3
+            input: [ text ]
+            contextWindow: 1048576
+            maxTokens: 131072
+            reasoningEfforts: { off: "none", low: "low", medium: "medium", high: "high" }
+- id: cost-meter
+  disabled: false
+- id: skills-manager
+  disabled: false
+- id: im-connect
+  disabled: false
+- id: genui
+  disabled: false
+- id: remote-web-ui
+  disabled: true

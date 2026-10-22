@@ -1,0 +1,3 @@
+{"date": "2026-10-20", "slug": "daily-china-20261020", "shot": "shot01", "vision_verdict": "翻转", "user_flagged": true, "regen_rounds": 2, "user_flagged_source": "cli", "ground_truth_verdict": "翻转90"}
+{"date": "2026-10-20", "slug": "daily-china-20261020", "shot": "shot02", "vision_verdict": "正常", "user_flagged": true, "user_flagged_source": "cli", "ground_truth_verdict": "翻转180"}
+{"date": "2026-10-20", "slug": "daily-china-20261020", "shot": "shot03", "vision_verdict": "正常", "user_flagged": false, "user_flagged_source": "cli", "ground_truth_verdict": "正常"}

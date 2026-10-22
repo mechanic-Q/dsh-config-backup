@@ -1,0 +1,24 @@
+{
+  "episode": [
+    "2026-10-17",
+    "flag_flush_1792651011753"
+  ],
+  "evidence": [
+    {
+      "category": "4-human-flag",
+      "sid": "shot08",
+      "round": "human_flag",
+      "frame": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\scripts\\.tmp_t17_test\\flag_flush_1792651011753\\_frames\\evidence\\human_flag\\shot08_20261022_143651.jpg",
+      "frame_win": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\scripts\\.tmp_t17_test\\flag_flush_1792651011753\\_frames\\evidence\\human_flag\\shot08_20261022_143651.jpg",
+      "source_frame": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\scripts\\.tmp_t17_test\\flag_flush_1792651011753\\_frames\\shot08.jpg",
+      "sha256": "240a42374fa81d24508638282a416c46b2ff7d1dc529871e7151e5eeffd77b13",
+      "judge": null,
+      "conf": null,
+      "why": "shot08 翻转了",
+      "local_verdict": "翻转",
+      "kind": "human_flag",
+      "synthetic": false,
+      "note": ""
+    }
+  ]
+}

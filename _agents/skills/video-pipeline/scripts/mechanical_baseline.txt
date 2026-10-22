@@ -1,0 +1,152 @@
+# 机械检查 baseline（#142）——只减不增。
+# 每条规则的判据与豁免范围写在 scripts/check_mechanical.py 的模块 docstring 里，
+# 这里只放存量清单；新增违规不进本文件（--shrink 遇到新增会直接拒绝）。
+#
+# 格式：规则<TAB>相对路径<TAB>允许条数<TAB>归一化源码片段
+# 指纹用源码片段而非行号：插行删行不会让基线失效，只有真改代码才会。
+# 语法规则不进本文件——语法错误零容忍，一次也不许进白名单。
+# 规则 6（host-mismatch）当前 0 条：全仓尚无脚本声明 __host__，声明即受检。
+# 规则 7（converter-dup，#171）盯 re 模式实参里的第二份转换形态；检查器
+# 自身判据正则走 CONV_EXEMPT_FILES，hostpath.py 走 EXEMPT_FILES，存量 0 条。
+
+subprocess-text	scripts/comfyui_selfheal.py	1	subprocess.run(cmd, capture_output=True, text=True, timeout=timeout, errors="replace")
+subprocess-text	scripts/compose_final.py	2	_sp.run(["ffmpeg", "-i", p, "-af", "volumedetect", "-f", "null", "-"], capture_output=True, text=True, timeout=120)
+subprocess-text	scripts/compose_final.py	1	_sp.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", p], capture_output=True, text=True, timeout=60)
+subprocess-text	scripts/compose_final.py	1	subprocess.run(["ffprobe", "-v", "error", "-select_streams", "a:0", "-show_entries", "stream=sample_rate,channels", "-of", "json", out], capture_output=True, text=True, timeout=30)
+subprocess-text	scripts/compose_final.py	1	subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=width,height,r_frame_rate", "-of", "json", out], capture_output=True, text=True, timeout=30)
+subprocess-text	scripts/compose_final.py	1	subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", v], capture_output=True, text=True, timeout=30)
+subprocess-text	scripts/extract_h3_frames.py	1	subprocess.run(["ffmpeg", "-y", "-v", "error", "-ss", str(ft), "-i", v, "-frames:v", "1", "-q:v", "3", out], capture_output=True, text=True, timeout=60)
+subprocess-text	scripts/gen_precise_subs.py	1	subprocess.run( ['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', wav], capture_output=True, text=True)
+subprocess-text	scripts/gen_precise_subs.py	1	subprocess.run(cmd, capture_output=True, text=True)
+subprocess-text	scripts/gen_subs_from_timeline.py	1	subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", wav], capture_output=True, text=True)
+subprocess-text	scripts/make_srt.py	1	subprocess.run(["ffprobe","-v","error","-show_entries","format=duration","-of","csv=p=0",p], capture_output=True, text=True)
+subprocess-text	scripts/run_pipeline.py	1	subprocess.run(cmd, shell=True, capture_output=True, text=True, timeout=timeout, env=e, cwd=cwd)
+subprocess-text	scripts/sph_publish_v5.py	2	subprocess.run(["curl", "-s", "-m", "3", "-o", "NUL", "-w", "%{http_code}", "http://127.0.0.1:9222/json/version"], capture_output=True, text=True)
+subprocess-text	scripts/strata_h3_lane.py	1	subprocess.run(["ip", "route", "show", "default"], capture_output=True, text=True, timeout=10)
+subprocess-text	scripts/submit_accel.py	1	_sp.run(["nvidia-smi", "--query-gpu=memory.used", "--format=csv=noheader,nounits"], capture_output=True, text=True, timeout=15)
+subprocess-text	scripts/sync_tts_durations.py	1	subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", path], capture_output=True, text=True, timeout=30)
+subprocess-text	scripts/test_enum_correct.py	1	subprocess.run([sys.executable, os.path.join(HERE, "storyboard_enhancer.py"), enh, "--design-dir", design_dir, "--out-report", rep], capture_output=True, text=True, cwd=HERE)
+subprocess-text	scripts/test_run_pipeline.py	1	subprocess.run([sys.executable, "-c", _snippet], capture_output=True, text=True, timeout=60)
+subprocess-text	scripts/test_storyboard_enhancer.py	1	subprocess.run(cmd, capture_output=True, text=True, cwd=os.path.dirname(__file__))
+subprocess-text	scripts/test_strata_copychain.py	1	subprocess.run([sys.executable, "-c", code], capture_output=True, text=True, env=env, cwd=HERE, timeout=120)
+subprocess-text	scripts/tts_batch.py	1	subprocess.run(cmd, cwd="/home/lmr/index-tts", env=env, capture_output=True, text=True, timeout=3600)
+subprocess-text	scripts/tts_sentence_timeline.py	1	subprocess.run(["ffprobe","-v","error","-show_entries","format=duration","-of","csv=p=0",sf], capture_output=True,text=True)
+subprocess-text	scripts/tts_sentence_timeline.py	1	subprocess.run(cmd, cwd="/home/lmr/index-tts", env=env, capture_output=True, text=True, timeout=1800)
+subprocess-text	scripts/verify_output.py	1	subprocess.run( ["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=width,height", "-of", "json", path], capture_output=True, text=True, timeout=20)
+subprocess-text	scripts/verify_output.py	2	subprocess.run( ["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "json", path], capture_output=True, text=True, timeout=20)
+open-encoding	scripts/check_overwrite.py	1	open(STATE)
+open-encoding	scripts/check_overwrite.py	1	open(STATE, "w")
+open-encoding	scripts/feishu_gate.py	1	open(TOKEN_CACHE)
+open-encoding	scripts/feishu_gate.py	1	open(TOKEN_CACHE, "w")
+open-encoding	scripts/pipeline_contract.py	1	open(f, "w")
+open-encoding	scripts/run_pipeline.py	1	open(f)
+open-encoding	scripts/run_pipeline.py	1	open(os.path.join(self.stamps_dir, f"stage_{stage}.json"), "w")
+open-encoding	scripts/test_gen_krea2_cover.py	1	open(empty, "w")
+open-encoding	scripts/test_ledger.py	4	open(fp)
+open-encoding	scripts/test_ledger.py	1	open(fp, "w")
+open-encoding	scripts/test_ledger.py	1	open(fp4, "w")
+open-encoding	scripts/test_ledger.py	1	open(fp5)
+open-encoding	scripts/test_ledger.py	1	open(fp5, "w")
+open-encoding	scripts/test_ledger.py	1	open(fp6)
+open-encoding	scripts/test_ledger.py	1	open(fp6, "w")
+open-encoding	scripts/test_ledger.py	1	open(fp7)
+open-encoding	scripts/test_ledger.py	1	open(fp7, "w")
+open-encoding	scripts/test_preflight.py	1	open(fake_md, "w")
+open-encoding	scripts/test_run_pipeline.py	1	open(os.path.join(tmp, f"stage_s{n:02d}.json"), "w")
+open-encoding	scripts/test_run_pipeline.py	1	open(os.path.join(tmp6, f"stage_{no}.json"), "w")
+open-encoding	scripts/test_verify_output.py	1	open(os.path.join(pr_dir, "bad.json"), "w")
+open-encoding	scripts/test_verify_output.py	1	open(os.path.join(pr_dir, "good.json"), "w")
+path-literal	_test/run_matrix.py	1	'/home/lmr/labs/video-pipeline-v3/_test/qds'
+path-literal	_test/run_matrix.py	1	'/home/lmr/labs/video-pipeline-v3/scripts'
+path-literal	_test/run_matrix.py	1	'/mnt/e/每日新中国/2026-09-03/video/每日新中国b站/流水线/daily-china-20260903'
+path-literal	_test/run_qwen_ref.py	1	'/home/lmr/labs/video-pipeline-v3/scripts'
+path-literal	_test/setup_workspace.py	1	'/home/lmr/labs/video-pipeline-v3/_test/qds'
+path-literal	_test/setup_workspace.py	1	'/mnt/e/每日新中国/2026-09-03/video/每日新中国b站/流水线/daily-china-20260903'
+path-literal	_test/stat_outputs.py	1	'/home/lmr/labs/video-pipeline-v3/_test/qds'
+path-literal	scripts/comfyui_selfheal.py	1	"/mnt/c/Users/LMR/AppData/Local/Temp/comfyui_heal_launch.ps1"
+path-literal	scripts/comfyui_selfheal.py	1	"/mnt/c/Windows/System32"
+path-literal	scripts/comfyui_selfheal.py	1	r"C:\Users\LMR\AppData\Local\Temp\comfyui_heal_launch.ps1"
+path-literal	scripts/comfyui_selfheal.py	1	r"E:\AI\Comfyui-WF-2026.8.8\Comfyui-WF-2026.8.8\ComfyUI"
+path-literal	scripts/comfyui_selfheal.py	1	r"E:\AI\Comfyui-WF-2026.8.8\Comfyui-WF-2026.8.8\python\python.exe"
+path-literal	scripts/comfyui_selfheal.py	1	r"E:\每日新中国\logs"
+path-literal	scripts/compose_final.py	1	"片头视频（/mnt/e/每日新中国/每日新中国片头.mp4），放最前"
+path-literal	scripts/dsh_judge.py	1	"/mnt/e/AI/deepseek-harness/DeepSeek Harness.exe"
+path-literal	scripts/dy_login_win.py	1	r"C:\Program Files\Google\Chrome\Application\chrome.exe"
+path-literal	scripts/dy_login_win.py	1	r"E:\每日新中国\logs\sau_win\chrome_sph_profile"
+path-literal	scripts/dy_login_win.py	1	r"\\wsl.localhost\Ubuntu\home\lmr\social-auto-upload\cookies\douyin_diyi.json"
+path-literal	scripts/feishu_gate.py	1	"/mnt/c/Users/*/.dsh/dsh-im-connect/channels.json"
+path-literal	scripts/gen_krea2_cover.py	1	"/mnt/c/Windows/System32/WindowsPowerShell/v1.0/powershell.exe"
+path-literal	scripts/gen_krea2_cover.py	1	"/mnt/e/AI/Comfyui-WF-2026.8.8/Comfyui-WF-2026.8.8/ComfyUI/output"
+path-literal	scripts/gen_krea2_cover.py	1	"/mnt/e/AI/Krea2资源/数字迷幻工作流、规则、插件、例图/工作流/krea2数字迷幻流.json"
+path-literal	scripts/gen_krea2_cover.py	1	$body = [System.IO.File]::ReadAllBytes('C:\\Users\\LMR\\AppData\\Local\\Temp\\krea2_
+path-literal	scripts/gen_precise_subs.py	1	'/home/lmr/每日新中国b站/流水线/daily-china-20260828'
+path-literal	scripts/krea2_to_api.py	1	"/mnt/c/Users/LMR/AppData/Local/Temp/object_info.json"
+path-literal	scripts/new_daily.py	1	"/mnt/e/每日新中国"
+path-literal	scripts/rotation_groundtruth.py	1	r"E:\每日新中国"
+path-literal	scripts/run_pipeline.py	1	"/home/lmr/.social-auto-upload/tools/biliup/linux-x86_64/biliup"
+path-literal	scripts/run_pipeline.py	1	"/home/lmr/qmr_content_creator/private/voice/references/expressive-reference.wav"
+path-literal	scripts/run_pipeline.py	1	"/home/lmr/social-auto-upload"
+path-literal	scripts/run_pipeline.py	1	"/home/lmr/social-auto-upload/.venv/bin/sau"
+path-literal	scripts/run_pipeline.py	1	"/home/lmr/social-auto-upload/cookies/bilibili_diyi.json"
+path-literal	scripts/sph_list_check.py	1	r"C:\Program Files\Google\Chrome\Application\chrome.exe"
+path-literal	scripts/sph_list_check.py	1	r"E:\每日新中国\logs\sau_win\chrome_sph_profile"
+path-literal	scripts/sph_list_check.py	1	r"E:\每日新中国\logs\sph_list_check.png"
+path-literal	scripts/sph_publish_v5.py	1	E:\每日新中国\
+path-literal	scripts/sph_publish_v5.py	1	r"C:\Program Files\Google\Chrome\Application\chrome.exe"
+path-literal	scripts/sph_publish_v5.py	1	r"E:\每日新中国\logs\sau_win\chrome_sph_profile"
+path-literal	scripts/sph_publish_v5.py	1	r"E:\每日新中国\logs\sau_win\tencent_diyi.json"
+path-literal	scripts/sph_publish_v5.py	1	r"E:\每日新中国\logs\sph_decl_diag.png"
+path-literal	scripts/sph_publish_v5.py	1	r"E:\每日新中国\logs\sph_decl_dom.html"
+path-literal	scripts/strata_window.py	1	"powershell.exe -NoProfile -Command \"Start-Process -WindowStyle Hidden " "-FilePath 'E:\\AI\\LLM\\Strata\\.venv\\Scripts\\python.exe' " "-ArgumentList 'E:\\AI\\LLM\\Strata\\serve\\server.py','--engin
+path-literal	scripts/submit_accel.py	1	"$body = [System.IO.File]::ReadAllBytes('C:\\Users\\LMR\\AppData\\Local\\Temp\\api_accel.json'); " "try { $r = Invoke-WebRequest -Uri 'http://127.0.0.1:8188/prompt' -Method Post -Body $body " "-Conten
+path-literal	scripts/submit_accel.py	1	"/home/lmr/comfy/generated_480P_test.jsonl"
+path-literal	scripts/submit_accel.py	1	"/mnt/c/Windows/System32/WindowsPowerShell/v1.0/powershell.exe"
+path-literal	scripts/submit_accel.py	1	"/mnt/e/AI/Comfyui-WF-2026.8.8/Comfyui-WF-2026.8.8/ComfyUI/output"
+path-literal	scripts/submit_accel.py	1	"/mnt/e/AI/Comfyui-WF-2026.8.8/Comfyui-WF-2026.8.8/ComfyUI/output/video/MiniMax_H3"
+path-literal	scripts/submit_accel.py	1	"/mnt/e/AI/Comfyui-WF-2026.8.8/Comfyui-WF-2026.8.8/ComfyUI/user/default/workflows/▶▷MiniMaxH3-加速视频流整合.json"
+path-literal	scripts/submit_accel.py	1	"/mnt/e/AI/Comfyui-WF-2026.8.8/minimax-h3-5080/480P"
+path-literal	scripts/test_dsh_judge.py	1	"/mnt/c/Users/x.jpg"
+path-literal	scripts/test_dsh_judge.py	1	"/mnt/e/a/b.jpg"
+path-literal	scripts/test_dsh_judge.py	1	"/mnt/e/video/_out/shot05.jpg"
+path-literal	scripts/test_dsh_judge.py	1	"/mnt/e/x/shot01.jpg"
+path-literal	scripts/test_dsh_judge.py	1	"E:/no/such/DeepSeek Harness.exe"
+path-literal	scripts/test_schema_strip_motion.py	1	"/mnt/e/每日新中国/2026-09-11/video/每日新中国b站/流水线/daily-china-20260911/06_H3prompt"
+path-literal	scripts/test_schema_strip_motion.py	1	"E:/每日新中国/2026-09-11/video/每日新中国b站/流水线/daily-china-20260911/06_H3prompt"
+path-literal	scripts/tts_batch.py	1	"/home/lmr/index-tts"
+path-literal	scripts/tts_batch.py	1	"/home/lmr/index-tts/.venv/bin/python"
+path-literal	scripts/tts_batch.py	1	"/home/lmr/index-tts/checkpoints_2_5"
+path-literal	scripts/tts_batch.py	1	"/home/lmr/qmr_content_creator/private/voice/references/passion-emotion-reference.wav"
+path-literal	scripts/tts_sentence_timeline.py	1	"/home/lmr/index-tts"
+path-literal	scripts/tts_sentence_timeline.py	1	"/home/lmr/index-tts/.venv/bin/python"
+path-literal	scripts/tts_sentence_timeline.py	1	"/home/lmr/index-tts/checkpoints_2_5"
+path-literal	scripts/tts_sentence_timeline.py	1	"/home/lmr/qmr_content_creator/private/voice/references/passion-emotion-reference.wav"
+path-literal	scripts/verify_output.py	1	"/home/lmr/comfy/h3_prompts"
+path-literal	scripts/verify_output.py	1	"/home/lmr/comfy/verify_report.json"
+path-literal	scripts/verify_output.py	1	"/home/lmr/comfy/分镜清单_raw.json"
+path-literal	scripts/vision_server.py	1	"/mnt/c/Users/LMR/AppData/Local/Temp/vision_server_launch.ps1"
+path-literal	scripts/vision_server.py	1	r"C:\Users\LMR\AppData\Local\Temp\vision_server_launch.ps1"
+path-literal	scripts/vision_server.py	1	r"C:\Windows"
+path-literal	scripts/vision_server.py	1	r"E:\AI\LLM\vision-judge"
+path-literal	scripts/vision_smoke.py	1	r"E:\每日新中国"
+except-pass	scripts/art_director.py	1	except Exception: pass
+except-pass	scripts/comfyui_selfheal.py	1	except Exception: # noqa: BLE001 — 播报失败不影响清理 pass
+except-pass	scripts/comfyui_selfheal.py	1	except Exception: # noqa: BLE001 — 播报失败不影响自愈 pass
+except-pass	scripts/comfyui_selfheal.py	1	except Exception: # noqa: BLE001 — 查询失败按未知处理（调用方区分场景） pass
+except-pass	scripts/feishu_gate.py	1	except Exception: pass
+except-pass	scripts/gen_krea2_cover.py	1	except Exception: pass
+except-pass	scripts/gen_platform_titles.py	1	except Exception: pass
+except-pass	scripts/host_contract.py	1	except Exception: pass
+except-pass	scripts/llm_json.py	1	except Exception: pass
+except-pass	scripts/pipeline_contract.py	1	except Exception: pass
+except-pass	scripts/rotation_dataset.py	1	except Exception: pass
+except-pass	scripts/run_pipeline.py	1	except Exception: # noqa: BLE001 pass
+except-pass	scripts/sph_list_check.py	1	except Exception: pass
+except-pass	scripts/sph_publish.py	1	except Exception: pass
+except-pass	scripts/sph_publish_v5.py	6	except Exception: pass
+except-pass	scripts/storyboard_photographer.py	2	except Exception: pass
+except-pass	scripts/submit_accel.py	3	except Exception: pass
+except-pass	scripts/test_evidence_train_chain.py	1	except Exception: pass
+except-pass	scripts/test_vision_chain.py	1	except Exception: pass
+except-pass	scripts/verify_output.py	5	except Exception: pass
+except-pass	scripts/vision_blindbench.py	2	except Exception: # noqa: BLE001 pass
+except-pass	scripts/vision_common.py	1	except Exception: # noqa: BLE001 — 预处理失败原图直送 pass

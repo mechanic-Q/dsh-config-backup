@@ -1,0 +1,41 @@
+宿主=Windows 解释器=C:\Users\LMR\anaconda3\python.exe 版本=3.13.0
+测试目录: C:\Users\LMR\.agents\skills\video-pipeline\scripts（36 个文件，选中 36）
+  PASS             test_comfyui_selfheal.py            0.1s
+  PASS             test_daily_review.py                0.1s
+  PASS             test_dataset_readonly.py            0.2s
+  PASS             test_driver_status.py               1.0s
+  PASS             test_dsh_judge.py                   1.4s
+  PASS             test_enum_correct.py                0.7s
+  PASS             test_evidence_train_chain.py        1.1s
+  PASS             test_feishu_gate.py                 0.5s
+  PASS             test_feishu_gate_token_heal.py      1.3s
+  PASS             test_gen_krea2_cover.py             0.1s
+  PASS             test_host_contract.py               0.4s
+  PASS             test_human_flag_loop.py             0.2s
+  PASS             test_jev_calibrate.py               0.1s
+  PASS             test_ledger.py                      0.1s
+  PASS             test_mechanical.py                  1.3s
+  PASS             test_newspaper_cover.py            27.0s
+  PASS             test_preflight.py                   0.4s
+  PASS             test_reconcile_clip.py             11.9s
+  PASS             test_repo_hygiene.py                0.4s
+  PASS             test_rotation_dataset.py            0.1s
+  PASS             test_run_pipeline.py               13.0s
+  PASS             test_run_tests.py                   1.6s
+  PASS             test_s08_judge_loop.py              5.7s
+  PASS             test_schema_strip_motion.py         0.1s
+  PASS             test_sph_publish.py                 0.1s
+  PASS             test_storyboard_enhancer.py         0.4s
+  PASS             test_strata_copychain.py           13.2s
+  PASS             test_strata_h3_lane.py             12.1s
+  PASS             test_strata_window.py               0.1s
+  PASS             test_t15_replay.py                  0.1s
+  PASS             test_verify_output.py               1.7s
+  PASS             test_vision_chain.py                0.1s
+  PASS             test_vision_date_root.py            0.1s
+  PASS             test_vision_driver.py              33.8s
+  PASS             test_vision_evidence.py            16.4s
+  PASS             test_vision_shortcircuit.py         0.1s
+
+合计: 绿=36 红=0 known-red=0 总耗时=147.0s
+全部通过 ✅

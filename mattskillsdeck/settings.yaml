@@ -1,0 +1,44 @@
+# 本文件的注释由插件生成；你自己加的注释会在下次写入时被替换。
+version: 1
+# 界面偏好（本机全工作区默认生效）
+ui:
+  # 主列表的状态过滤与排序
+  stateFilter: frontier
+  sortKey: ''
+  sortDir: ''
+# 按工作区区分的观看状态（键 = 工作区根目录）
+workspaces:
+  "C:\\Users\\LMR\\.agents\\skills\\video-pipeline":
+    # 状态栏横幅与胶囊是否收起
+    bannerFolded: false
+    # 无仓库红卡是否已收起
+    noRepoDismissed: false
+    # 红文件夹标志的说明浮层是否已自动展开过
+    subwsMarkAutoShown: false
+  "E:\\AI\\deepseek-harness\\temp":
+    # 状态栏横幅与胶囊是否收起
+    bannerFolded: true
+    # 无仓库红卡是否已收起
+    noRepoDismissed: false
+    # 红文件夹标志的说明浮层是否已自动展开过
+    subwsMarkAutoShown: false
+  "E:\\1015Grand":
+    # 状态栏横幅与胶囊是否收起
+    bannerFolded: true
+    # 无仓库红卡是否已收起
+    noRepoDismissed: false
+    # 红文件夹标志的说明浮层是否已自动展开过
+    subwsMarkAutoShown: false
+  "E:\\Daily\\daily-china-news-hardcoded":
+    # 状态栏横幅与胶囊是否收起
+    bannerFolded: false
+    # 无仓库红卡是否已收起
+    noRepoDismissed: false
+    # 红文件夹标志的说明浮层是否已自动展开过
+    subwsMarkAutoShown: false
+# 本地诊断日志开关
+debug:
+  enabled: false
+  sampleRate: 1
+# 动作模板（空 = 用默认文本）
+templates: {}

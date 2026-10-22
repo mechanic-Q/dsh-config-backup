@@ -1,0 +1,40 @@
+{
+  "episode": [
+    "2026-10-20",
+    "daily-china-20261020"
+  ],
+  "evidence": [
+    {
+      "category": "1-confirmed",
+      "sid": "shot01",
+      "round": "round0",
+      "frame": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\.tmp_182t_339740_1\\2026-10-20\\video\\每日新中国b站\\流水线\\daily-china-20261020\\_frames\\evidence\\1-confirmed\\round0_shot01.jpg",
+      "frame_win": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\.tmp_182t_339740_1\\2026-10-20\\video\\每日新中国b站\\流水线\\daily-china-20261020\\_frames\\evidence\\1-confirmed\\round0_shot01.jpg",
+      "source_frame": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\.tmp_182t_339740_1\\2026-10-20\\video\\每日新中国b站\\流水线\\daily-china-20261020\\_frames\\evidence\\round0\\shot01.jpg",
+      "sha256": "216662bb6c27b96d7b29df71be8fa4a4702afdc9d8e1ccd4e4e472427a0dfa6f",
+      "judge": "翻转90",
+      "conf": 0.95,
+      "why": "横躺",
+      "local_verdict": "翻转",
+      "kind": "confirmed",
+      "synthetic": false,
+      "note": ""
+    },
+    {
+      "category": "2-judge-found",
+      "sid": "shot02",
+      "round": "round0",
+      "frame": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\.tmp_182t_339740_1\\2026-10-20\\video\\每日新中国b站\\流水线\\daily-china-20261020\\_frames\\evidence\\2-judge-found\\round0_shot02.jpg",
+      "frame_win": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\.tmp_182t_339740_1\\2026-10-20\\video\\每日新中国b站\\流水线\\daily-china-20261020\\_frames\\evidence\\2-judge-found\\round0_shot02.jpg",
+      "source_frame": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\.tmp_182t_339740_1\\2026-10-20\\video\\每日新中国b站\\流水线\\daily-china-20261020\\_frames\\evidence\\round0\\shot02.jpg",
+      "sha256": "6d9e95ee438a6b46624e8097c1feefc5bc06d53f2020766f19374ad19663a912",
+      "judge": "翻转180",
+      "conf": 0.97,
+      "why": "旗帜横倒",
+      "local_verdict": "正常",
+      "kind": "judge_found",
+      "synthetic": false,
+      "note": ""
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "version": 1,
+  "at": 1792672080025,
+  "egress": {
+    "ip": "78.142.192.236",
+    "country": "NL"
+  },
+  "results": {
+    "cat-jam-free": {
+      "state": "available",
+      "ttftMs": 2091,
+      "latencyMs": 2162,
+      "at": 1792159135290
+    },
+    "muse-spark-1.2-contributor-free": {
+      "state": "throttled",
+      "detail": "Rate limit exceeded. Please try again later.",
+      "latencyMs": 1333,
+      "at": 1792188849393
+    },
+    "mimo-v2.6-flash-free": {
+      "state": "throttled",
+      "detail": "Free usage limit reached. Subscribe to OpenCode Go to keep going: https://opencode.ai/go",
+      "latencyMs": 570,
+      "startedAt": 1792672076922,
+      "at": 1792672077493
+    },
+    "nemotron-3.5-lightning-free": {
+      "state": "throttled",
+      "detail": "Free usage limit reached. Subscribe to OpenCode Go to keep going: https://opencode.ai/go",
+      "latencyMs": 472,
+      "startedAt": 1792672078551,
+      "at": 1792672079023
+    },
+    "jev-1.13-free": {
+      "state": "unavailable",
+      "detail": "Model does not support this protocol.",
+      "latencyMs": 445,
+      "startedAt": 1792672078998,
+      "at": 1792672079443
+    },
+    "muse-spark-1.3-contributor-free": {
+      "state": "throttled",
+      "detail": "Rate limit exceeded. Please try again later.",
+      "latencyMs": 395,
+      "at": 1792188848956
+    },
+    "step-5-preview-free": {
+      "state": "available",
+      "ttftMs": 1380,
+      "latencyMs": 1628,
+      "at": 1792101520565
+    },
+    "longcat-2.5-preview-free": {
+      "state": "throttled",
+      "detail": "Rate limit exceeded. Please try again later.",
+      "latencyMs": 355,
+      "startedAt": 1792627792476,
+      "at": 1792627792831
+    },
+    "space-bunny-free": {
+      "state": "throttled",
+      "detail": "Rate limit exceeded. Please try again later.",
+      "latencyMs": 1653,
+      "at": 1792411657326
+    },
+    "deepseek-v4.1-flash-free": {
+      "state": "throttled",
+      "detail": "Free usage limit reached. Subscribe to OpenCode Go to keep going: https://opencode.ai/go",
+      "latencyMs": 529,
+      "startedAt": 1792672079023,
+      "at": 1792672079552
+    },
+    "nemotron-3.5-super-vl-free": {
+      "state": "throttled",
+      "detail": "Free usage limit reached. Subscribe to OpenCode Go to keep going: https://opencode.ai/go",
+      "latencyMs": 1505,
+      "startedAt": 1792672077493,
+      "at": 1792672078998
+    },
+    "ll-alpha-free": {
+      "state": "throttled",
+      "detail": "Rate limit exceeded. Please try again later.",
+      "latencyMs": 1345,
+      "at": 1792184348031
+    },
+    "glm-5.3-flash-free": {
+      "state": "throttled",
+      "detail": "Free usage limit reached. Subscribe to OpenCode Go to keep going: https://opencode.ai/go",
+      "latencyMs": 565,
+      "startedAt": 1792672079443,
+      "at": 1792672080009
+    },
+    "beam-free": {
+      "state": "throttled",
+      "detail": "Free usage limit reached. Subscribe to OpenCode Go to keep going: https://opencode.ai/go",
+      "latencyMs": 1738,
+      "startedAt": 1792672075170,
+      "at": 1792672076908
+    },
+    "big-pickle": {
+      "state": "throttled",
+      "detail": "Free usage limit reached. Subscribe to OpenCode Go to keep going: https://opencode.ai/go",
+      "latencyMs": 1752,
+      "startedAt": 1792672075170,
+      "at": 1792672076922
+    },
+    "minimax-m3.1-flash-free": {
+      "state": "throttled",
+      "detail": "Free usage limit reached. Subscribe to OpenCode Go to keep going: https://opencode.ai/go",
+      "latencyMs": 473,
+      "startedAt": 1792672079552,
+      "at": 1792672080025
+    },
+    "flint-40b-free": {
+      "state": "throttled",
+      "detail": "Free usage limit reached. Subscribe to OpenCode Go to keep going: https://opencode.ai/go",
+      "latencyMs": 1643,
+      "startedAt": 1792672076908,
+      "at": 1792672078551
+    }
+  }
+}

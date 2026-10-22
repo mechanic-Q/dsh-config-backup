@@ -1,0 +1,67 @@
+packages:
+  - .
+
+nodeLinker: hoisted
+autoInstallPeers: false
+
+# pnpm 11 quarantines packages newer than `minimumReleaseAge` (default 24h) and
+# re-verifies every lockfile entry on install. @michengai/dsh-skills-manager 1.1.21
+# is the current `latest` but was published 2026-10-15T01:40:08Z, so it stays under
+# the cutoff until 2026-10-16T01:40:08Z. Approved explicitly; delete this entry once
+# 1.1.21 matures (or when moving to a newer release) to restore the default gate.
+minimumReleaseAgeExclude:
+  - '@michengai/dsh-skills-manager@1.1.21 || 1.2.0 || 1.2.5 || 1.2.6'
+  - '@michengai/dsh-agency-agents@1.0.19 || 1.0.20 || 1.2.1 || 1.2.2 || 1.2.3'
+  - '@michengai/dsh-archive-manager@1.0.19 || 1.0.20 || 1.1.0 || 1.1.2 || 1.1.6'
+  - '@michengai/dsh-btw@0.1.24 || 1.0.0'
+  - '@michengai/dsh-code-review@0.1.16 || 1.0.1'
+  - '@michengai/dsh-codex-ui@1.1.40 || 1.1.42'
+  - '@michengai/dsh-im-connect@0.1.77 || 1.0.1 || 1.0.5'
+  - '@michengai/dsh-pua@0.3.28 || 1.0.1'
+  - '@michengai/dsh-simplify@0.1.16 || 1.0.1'
+  - dsh-context@0.72.0 || 0.73.0 || 0.73.3
+  - dsh-mcp-connector@0.2.73 || 0.2.75
+  - dshmarket@1.66.23 || 1.66.26 || 1.66.32 || 1.66.35 || 1.66.37 || 1.66.42
+  - '@liustack/modsearch@5.10.7'
+  - dsh-builtin-browser@0.4.11 || 0.4.13
+  - dsh-free-search@0.9.1 || 0.9.2
+  - billion-context@0.1.198 || 0.1.199 || 0.1.201 || 0.1.202
+  - '@changfenhuang/dsh-genui@0.13.0'
+  - '@linxin666/dsh-client-ui-git-graph@0.4.7'
+  - '@linxin666/dsh-client-ui-plugin-manager@0.4.7'
+  - '@linxin666/dsh-client-ui-preset-center@0.4.7'
+  - '@linxin666/dsh-client-ui-task-board@0.4.7'
+  - dsh-wsl-tool@1.12.7 || 1.12.8
+  - '@linxin666/dsh-i18n@0.4.7'
+  - '@linxin666/dsh-remote-web-ui@0.4.7 || 0.4.8'
+  - '@linxin666/dsh-ssh@0.4.7'
+  - dsh-better-sidebar@0.28.0
+  - dsh-cost-meter@1.9.6 || 1.9.8 || 1.9.16
+  - cc-safety-net@2.6.14 || 2.6.16
+  - dsh-mattpocock-skills-deck@1.9.0-beta.5
+  - dsh-plugin-update@0.18.25
+  - '@vectorize-io/hindsight-coding-agents@0.8.2'
+
+# pnpm 11 blocks dependency build scripts by default. While any build stays
+# unapproved, pnpm fails the WHOLE `pnpm add` with ERR_PNPM_IGNORED_BUILDS, which
+# during the isolated trial took down 12 consecutive installs in one batch and 6 in
+# the next. These eight are the transitive prepare/postinstall steps of the installed
+# plugin set; each was verified necessary in the trial (cloudflared, for example,
+# downloads a 55 MB platform binary).
+#
+#   cloudflared, cpu-features, protobufjs, ssh2   <- @linxin666/dsh-remote-web-ui, @linxin666/dsh-ssh
+#   better-sqlite3, onnxruntime-node, esbuild     <- dsh-univer-office, billion-context
+allowBuilds:
+  protobufjs: false
+  koffi: false
+  cloudflared: true
+  cpu-features: true
+  ssh2: true
+  better-sqlite3: true
+  onnxruntime-node: true
+  esbuild: true
+  dsh-ops: true
+  dsh-ops@git+https://github.com/T-Auto/dsh-ops.git: true
+  dsh-ops@https://codeload.github.com/T-Auto/dsh-ops/tar.gz/7a2642d5337291905fc11073fdd718ae92f4c710: true
+  dsh-ops@git+https://github.com/T-Auto/dsh-ops.git#7a2642d5337291905fc11073fdd718ae92f4c710: true
+  dsh-ops@https://codeload.github.com/T-Auto/dsh-ops/tar.gz/0ffcd8a4e6bb1dd743dc0f3e63900f52700217fc: true

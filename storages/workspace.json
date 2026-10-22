@@ -1,0 +1,156 @@
+{
+  "unit": {
+    "name": "workspace",
+    "version": 2
+  },
+  "global": {
+    "initialized": true,
+    "defaultWorkspaceId": "6915fe10-f988-419e-ae6a-39944e3a9c8f",
+    "workspaceIds": [
+      "625fc1b8-563e-490e-aa93-7f0e6c2c7871",
+      "18d6a831-b1c8-49bf-8103-60c1136de4c5",
+      "97b2a554-b3ca-417b-a3a8-161800603bcb",
+      "c27e5a92-4506-4262-8350-a27e0e1cc1f0",
+      "0328ff82-e8b4-4d84-9ee3-58a4034526d1"
+    ],
+    "archivedSessionIds": [],
+    "pinnedSessionIds": []
+  },
+  "tables": {
+    "workspaces": {
+      "0328ff82-e8b4-4d84-9ee3-58a4034526d1": {
+        "path": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline",
+        "title": "video-pipeline",
+        "sessionIds": [
+          "session-d8653df6-3d25-4f38-9e2a-4d14ffab3a5e",
+          "session-5de3001e-524f-4f80-8be2-e020fc344649",
+          "session-47665296-5091-4584-82e9-148b04c092e3",
+          "session-88b051b7-98e1-47ec-9a57-f36589588825",
+          "session-08aa7512-958f-4c54-a056-ecd769f56edb",
+          "session-5cf32208-d1d7-4096-84bc-483af05f3033",
+          "session-3b44a39f-3232-4d73-abc5-d54d1e8ec7aa",
+          "session-3ef3ea0a-8e3c-4621-acb6-3ea859117647",
+          "session-19e366a1-a320-4fdf-b641-5551f6dbccfe",
+          "session-0cb7bd65-fb21-4505-8ff4-c320880ad5d6",
+          "session-543aaa3a-b44d-4390-a6d2-b4eceff33c9c",
+          "session-a10e51b4-98b7-4b1b-b92c-588f5b697236",
+          "session-cf91694e-5ed7-4b4b-93bd-fd4089f5a046",
+          "session-c8927acf-c035-43a5-a5a9-ef11d2415331",
+          "session-d34baf43-c56e-4707-87ac-fad429b92805",
+          "session-b8229cb3-e1c9-4609-8d33-4a982c45da36",
+          "session-fc4e6b14-857f-4383-81a8-029c17782c01",
+          "session-78541d2b-9f40-420a-96a0-5d5ab82b0e60",
+          "session-e67f659e-431c-43f8-819b-0525bffc25aa",
+          "session-e2de22c8-6e3d-4b27-8255-3f14bb0506fe",
+          "session-348ac114-cb5a-449f-8411-c498ecc146a2",
+          "session-6c2d5a0a-3ca8-467e-a911-d734109ddbd0",
+          "session-bd52c91f-da33-4a2e-ba7b-aa10c104c771",
+          "session-7e5a3284-df51-46a3-88a1-323c58f0b6f3",
+          "session-e8f80cee-e75a-4165-ad2c-00e853c6e64c",
+          "session-1f8330bc-3c9d-4e9e-8a00-0a08c453debe",
+          "session-7a701add-80d6-49ce-a809-98dfecd3ce79",
+          "session-efc8f50a-cd50-4af5-a032-c896f683965c",
+          "session-9a759e29-8931-4705-a614-95b08a1306ee",
+          "session-c67d3cc0-53d4-489b-af61-adf99d9b3a1a",
+          "session-8c50b90b-cd63-4e68-9b86-a8ddeb0e789a",
+          "session-9124afaa-ddb8-4801-872c-a34d984c073e",
+          "session-fd971b3e-052d-4e6e-b122-986835915385",
+          "session-4917987d-9f8b-4f4a-ba47-4afd4791f52c",
+          "session-3c42218f-f9c0-4056-ac5d-eae89631c73e",
+          "session-f383d118-971b-4840-a6e5-f239d10e0385",
+          "session-d91098ba-4158-4775-b110-e3862a0b7b82",
+          "session-3532ffa7-95db-490d-a571-5dafc6f241d8",
+          "session-624a69b2-a8c2-4bb5-b539-33b3853e62a6",
+          "session-981f39fc-4642-469e-b513-f050744b9cab",
+          "session-99d411e8-64f6-4f1a-a5a3-d92e7d7d5c6e",
+          "session-d17cfc97-613f-453f-8f8a-713ee4ca13c7",
+          "session-f44c950c-190b-4907-a70f-72f04ad8d36c",
+          "session-0bd44e7f-2306-431a-9b72-e78da6f004e4",
+          "session-6c80423b-4e06-4b80-91ce-7beaedd5e51c",
+          "session-c2e15b68-b1d5-4868-a458-715d5271df3b",
+          "session-46243dc3-7957-4a55-acbd-65a8d5441fc0",
+          "session-d5f33bd3-182e-4d3a-9b6e-b94bf53ed2b4"
+        ],
+        "createdAt": "2026-10-15T17:25:23.152Z",
+        "updatedAt": "2026-10-22T11:42:46.262Z"
+      },
+      "c27e5a92-4506-4262-8350-a27e0e1cc1f0": {
+        "path": "E:\\1015Grand",
+        "title": "1015Grand",
+        "sessionIds": [
+          "session-765cdadc-38f7-46a8-a4b3-0a35f8296715",
+          "session-944b57c4-49ad-4217-a6e8-b164c6ea0f6b",
+          "session-0378b011-6f5e-4814-92f8-08cfeacf6f0f",
+          "session-1c335873-45c7-4243-a272-d7e164b4a1e3"
+        ],
+        "createdAt": "2026-10-17T18:58:17.648Z",
+        "updatedAt": "2026-10-19T12:17:05.091Z"
+      },
+      "97b2a554-b3ca-417b-a3a8-161800603bcb": {
+        "path": "E:\\AI\\deepseek-harness\\temp",
+        "title": "temp",
+        "sessionIds": [
+          "session-c0c6e1ce-12ef-4146-9f1a-5b397e989536",
+          "session-d111606e-863c-43cc-8015-4d525d332b7d",
+          "session-4771f310-0f73-4501-8a8b-8836422ac134",
+          "session-b0de486d-f410-4263-9f87-d0b4f974d738",
+          "session-45f68e15-9683-4721-9819-292cb98a56b3",
+          "session-b8af54b7-c37b-425b-a020-e377f152b372",
+          "session-1ea803a1-1b53-4c58-8462-0911c79d3652",
+          "session-ad5b0801-82e6-4511-a1ee-1de3bceac6d4",
+          "session-e2696ac8-b2b0-476f-b0ab-d5c9b4765683",
+          "session-abd5327e-2601-4082-bafe-d66efe290f62",
+          "session-c6b00d71-0c91-4549-823e-c45d32f9fc4e",
+          "session-85c377dc-fda4-473a-892f-79de912f6650",
+          "session-548088f9-68f7-4aaa-8879-333f480cfad9",
+          "session-87ea929c-6667-4c37-97a3-09c65d694043",
+          "session-16043c6a-5941-4029-8e8d-214b0fbcf07a",
+          "session-d74865e7-bb6d-42b8-82fe-8d2c06c7f811",
+          "session-af323519-f210-4beb-9e43-aa81ebf5df51",
+          "session-91070626-057a-409b-b1e8-e8458fbb5e09",
+          "session-1b0c666f-948c-471a-95b3-a82bcfad50b9",
+          "session-b2adceb9-34f2-4697-9899-47ccecf56925",
+          "session-9df912c2-cb5a-4177-adc1-9163cabc2595",
+          "session-fc467cba-0e6e-47f1-a11b-dcdab03871ae",
+          "session-cf06f6e6-7db6-4762-b1b6-c928c38a7194",
+          "session-cb6f9481-b808-4082-8864-bcc5e16b8d2e",
+          "session-ddd22016-805f-4fd4-8f98-94c9f0164b14",
+          "session-f1d109f2-0074-4cf5-8fac-382a271ed7f8",
+          "session-c6b0651c-617b-4ebe-8f9d-17f204930487",
+          "session-d5d57d64-4f72-4451-b3b1-13286c174d23",
+          "session-68ded432-e9bb-4b62-b593-4cc5f74b456b",
+          "session-dc1875fb-4bec-4f79-8266-f300c59ff0b2",
+          "session-1cd0e2e6-d202-43e0-a121-73ccedefd74a",
+          "session-06fec4cb-c32c-4fdf-a9c1-d9e936de1077",
+          "session-254326d2-a182-4f15-902d-34a1e487c14c",
+          "session-14b95507-16a4-48fa-9437-5ba8b13937ef"
+        ],
+        "createdAt": "2026-10-18T06:24:17.620Z",
+        "updatedAt": "2026-10-22T09:12:49.761Z"
+      },
+      "18d6a831-b1c8-49bf-8103-60c1136de4c5": {
+        "path": "E:\\frisbee-detector",
+        "title": "frisbee-detector",
+        "sessionIds": [
+          "session-8e1debc3-43a0-44d2-af95-eafe49ebd7a0",
+          "session-863fb059-b3e7-4227-8158-e9f6100da627",
+          "session-63ef2e92-2b7e-470d-b43d-2be6f78febf9",
+          "session-b5ae045c-92ba-4075-896e-f062a77dc64d"
+        ],
+        "createdAt": "2026-10-19T05:35:59.814Z",
+        "updatedAt": "2026-10-21T19:17:10.986Z"
+      },
+      "625fc1b8-563e-490e-aa93-7f0e6c2c7871": {
+        "path": "E:\\Daily\\daily-china-news-hardcoded",
+        "title": "daily-china-news-hardcoded",
+        "sessionIds": [
+          "session-aafaf2ec-67c0-492c-a400-8388b8cf8f23",
+          "session-21849def-9715-4696-851e-b7b3bb493e79",
+          "session-244d9271-d2d3-44b1-8f7c-1c29149f4c39"
+        ],
+        "createdAt": "2026-10-19T17:00:37.323Z",
+        "updatedAt": "2026-10-19T18:34:22.390Z"
+      }
+    }
+  }
+}

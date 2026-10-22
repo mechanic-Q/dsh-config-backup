@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1200" height="340" viewBox="0 0 1200 340"
+     role="img" aria-labelledby="vp-title vp-desc">
+  <title id="vp-title">video-pipeline — B站口播稿到发布的全链路 Skill</title>
+  <desc id="vp-desc">左侧为项目名与一句话介绍：B站口播稿到 H3 视频、字幕、封面、发布的全链路 Skill，driver 一条命令到发布。右侧为 driver s01-s13 流程：口播稿定稿、分段、TTS、设计+H3 prompt（Strata 单次调用）、抽帧判读、成片字幕、封面、确认门到发布。</desc>
+
+  <rect width="1200" height="340" rx="26" fill="#0f1116"/>
+
+  <!-- ===== 左：标题块 ===== -->
+  <g id="title-block" transform="translate(64 0)">
+    <text x="0" y="88" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+          font-size="16" letter-spacing="2" fill="#e8b34b">DRIVER s01-s13 · PRIVATE SKILL</text>
+
+    <text x="0" y="146" font-family="-apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif"
+          font-size="50" font-weight="800" fill="#eceff5">video-pipeline</text>
+
+    <text x="0" y="196" font-family="-apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif"
+          font-size="22" fill="#c2c9d4">B站口播稿 → H3 视频 → 字幕 → 封面 → 发布，</text>
+    <text x="0" y="228" font-family="-apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif"
+          font-size="22" fill="#c2c9d4">driver 一条命令到发布，阶段间交接即文件。</text>
+
+    <text x="0" y="278" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+          font-size="17" fill="#8d97a8">单支耗时 <tspan fill="#3ddc97" font-weight="700">−81%</tspan> · 令牌 <tspan fill="#3ddc97" font-weight="700">−85%</tspan> · 文字设计段 <tspan fill="#3ddc97" font-weight="700">101min→~2min</tspan></text>
+
+    <text x="0" y="310" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+          font-size="15" fill="#8d97a8">脚本自解析位置 · 发布前干跑 <tspan fill="#e8b34b">--check</tspan> 验输入</text>
+  </g>
+
+  <!-- ===== 右：driver 阶段矩阵 ===== -->
+  <g id="stages" font-family="-apple-system, 'PingFang SC', 'Noto Sans CJK SC', sans-serif">
+    <g>
+      <rect x="656" y="52" width="248" height="52" rx="9" fill="#1a1f28" stroke="#2b323e"/>
+      <text x="676" y="84" font-size="16" font-weight="700" fill="#e8b34b">00</text>
+      <text x="704" y="84" font-size="17" fill="#eceff5">口播稿定稿 <tspan fill="#8d97a8" font-size="13">确认门①锚点</tspan></text>
+    </g>
+    <g>
+      <rect x="656" y="116" width="248" height="52" rx="9" fill="#1a1f28" stroke="#2b323e"/>
+      <text x="676" y="148" font-size="16" font-weight="700" fill="#e8b34b">01</text>
+      <text x="704" y="148" font-size="17" fill="#eceff5">分段+台词 <tspan fill="#8d97a8" font-size="13">raw.json</tspan></text>
+    </g>
+    <g>
+      <rect x="656" y="180" width="248" height="52" rx="9" fill="#1a1f28" stroke="#2b323e"/>
+      <text x="676" y="212" font-size="16" font-weight="700" fill="#e8b34b">02</text>
+      <text x="704" y="212" font-size="17" fill="#eceff5">TTS 语音 <tspan fill="#8d97a8" font-size="13">音频先行</tspan></text>
+    </g>
+    <g>
+      <rect x="656" y="244" width="248" height="52" rx="9" fill="#1a1f28" stroke="#e8b34b" stroke-opacity="0.55"/>
+      <text x="676" y="276" font-size="16" font-weight="700" fill="#e8b34b">04</text>
+      <text x="704" y="276" font-size="17" fill="#eceff5">设计+H3 prompt <tspan fill="#8d97a8" font-size="13">Strata 直出</tspan></text>
+    </g>
+    <g>
+      <rect x="920" y="52" width="248" height="52" rx="9" fill="#1a1f28" stroke="#2b323e"/>
+      <text x="940" y="84" font-size="16" font-weight="700" fill="#e8b34b">08</text>
+      <text x="968" y="84" font-size="17" fill="#eceff5">抽帧判读 <tspan fill="#8d97a8" font-size="13">vision 竖屏防疫</tspan></text>
+    </g>
+    <g>
+      <rect x="920" y="116" width="248" height="52" rx="9" fill="#1a1f28" stroke="#2b323e"/>
+      <text x="940" y="148" font-size="16" font-weight="700" fill="#e8b34b">09-10</text>
+      <text x="1000" y="148" font-size="17" fill="#eceff5">成片+字幕 <tspan fill="#8d97a8" font-size="13">whisper 并行</tspan></text>
+    </g>
+    <g>
+      <rect x="920" y="180" width="248" height="52" rx="9" fill="#1a1f28" stroke="#2b323e"/>
+      <text x="940" y="212" font-size="16" font-weight="700" fill="#e8b34b">11</text>
+      <text x="968" y="212" font-size="17" fill="#eceff5">封面 <tspan fill="#8d97a8" font-size="13">Krea2+平台定制</tspan></text>
+    </g>
+    <g>
+      <rect x="920" y="244" width="248" height="52" rx="9" fill="#1a1f28" stroke="#3ddc97" stroke-opacity="0.55"/>
+      <text x="940" y="276" font-size="16" font-weight="700" fill="#3ddc97">12-13</text>
+      <text x="1000" y="276" font-size="17" fill="#eceff5">确认门→发布 <tspan fill="#8d97a8" font-size="13">飞书审核</tspan></text>
+    </g>
+    <!-- 连接箭头：左列到右列 -->
+    <path d="M 904 270 C 916 270, 916 78, 928 78" stroke="#2b323e" stroke-width="2" fill="none"/>
+  </g>
+</svg>

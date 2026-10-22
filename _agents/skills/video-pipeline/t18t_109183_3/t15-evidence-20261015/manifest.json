@@ -1,0 +1,57 @@
+{
+  "episode": [
+    "2026-10-15",
+    "daily-china-20261015"
+  ],
+  "human_flips": [],
+  "rounds": [],
+  "evidence": [
+    {
+      "category": "2-judge-found",
+      "sid": "shot03",
+      "round": "round0",
+      "frame": "/mnt/c/Users/LMR/.agents/skills/video-pipeline/t18t_109183_3/t15-evidence-20261015/2-judge-found/round0_shot03.jpg",
+      "frame_win": "/mnt/c/Users/LMR/.agents/skills/video-pipeline/t18t_109183_3/t15-evidence-20261015/2-judge-found/round0_shot03.jpg",
+      "source_frame": "/mnt/c/Users/LMR/.agents/skills/video-pipeline/t18t_109183_3/2026-10-15/video/每日新中国b站/流水线/daily-china-20261015/_frames/shot03.jpg",
+      "sha256": "4ec68c24cd907efb977446a241d10caac753f9b8e3eb248c2cc67f446eee8b12",
+      "judge": "翻转90",
+      "conf": 0.9,
+      "why": "测试合成",
+      "local_verdict": "正常",
+      "synthetic": false,
+      "note": ""
+    },
+    {
+      "category": "2-judge-found",
+      "sid": "shot09",
+      "round": "round0",
+      "frame": "/mnt/c/Users/LMR/.agents/skills/video-pipeline/t18t_109183_3/t15-evidence-20261015/2-judge-found/round0_shot09.jpg",
+      "frame_win": "/mnt/c/Users/LMR/.agents/skills/video-pipeline/t18t_109183_3/t15-evidence-20261015/2-judge-found/round0_shot09.jpg",
+      "source_frame": "/mnt/c/Users/LMR/.agents/skills/video-pipeline/t18t_109183_3/2026-10-15/video/每日新中国b站/流水线/daily-china-20261015/_frames/shot09.jpg",
+      "sha256": "4ec68c24cd907efb977446a241d10caac753f9b8e3eb248c2cc67f446eee8b12",
+      "judge": "翻转90",
+      "conf": 0.9,
+      "why": "测试合成",
+      "local_verdict": "正常",
+      "synthetic": false,
+      "note": ""
+    },
+    {
+      "category": "3-unfixed",
+      "sid": "shot03",
+      "round": "final",
+      "frame": "/mnt/c/Users/LMR/.agents/skills/video-pipeline/t18t_109183_3/t15-evidence-20261015/3-unfixed/final_shot03.jpg",
+      "frame_win": "/mnt/c/Users/LMR/.agents/skills/video-pipeline/t18t_109183_3/t15-evidence-20261015/3-unfixed/final_shot03.jpg",
+      "source_frame": "/mnt/c/Users/LMR/.agents/skills/video-pipeline/t18t_109183_3/2026-10-15/video/每日新中国b站/流水线/daily-china-20261015/_frames/shot03.jpg",
+      "sha256": "4ec68c24cd907efb977446a241d10caac753f9b8e3eb248c2cc67f446eee8b12",
+      "judge": "翻转90",
+      "conf": 0.9,
+      "why": "测试合成",
+      "local_verdict": "正常",
+      "synthetic": false,
+      "note": ""
+    }
+  ],
+  "judge_calls": [],
+  "negative_control": []
+}

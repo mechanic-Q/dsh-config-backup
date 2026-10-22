@@ -1,0 +1,8 @@
+fix(#182): 清理块不再静默吞异常（CI 机械检查 except-pass）
+
+上一提交在本地 check_mechanical 报「新增违规 0」，CI 却报 1 处——
+根因是 check_mechanical 只扫 git 跟踪的 *.py（git ls-files），
+新建的测试文件当时还是未跟踪状态，提交后才被扫出来。
+
+违规本身是真的：清理块 except Exception: pass 静默吞异常，
+违反「吞异常不留痕」的判据。改为打印一行留痕（清理失败仍不阻塞结论）。

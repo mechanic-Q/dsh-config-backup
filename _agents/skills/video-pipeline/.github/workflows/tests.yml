@@ -1,0 +1,71 @@
+# CI：PR 触发的护栏（#141）
+#
+# 设计原则（AC⑤）：CI 不复制第二套执行逻辑——装好依赖后直接调 scripts/run_tests.py，
+# 与本地开发机跑的是同一个跑器（同一份发现规则、同一份断言、同一份失败明细格式）。
+# 退出码 = 红文件数（0 全绿），CI 只认退出码与 stdout，不需要额外解析。
+name: tests
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+# 同一 PR 连推多次时取消上一轮：省额度，也避免旧提交的绿灯压住新提交的红灯。
+concurrency:
+  group: tests-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    name: 全部自检（ubuntu-latest / Python 3.12）
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # 测试在 import 阶段就要的两个第三方库（缺了必须红，不许静默跳过）：
+      #   PIL   → scripts/test_evidence_train_chain.py:58、scripts/test_run_pipeline.py:473
+      #   numpy → scripts/test_reconcile_clip.py:23
+      # 其余第三方（playwright / torch / open_clip / cv2）都只在被测脚本的函数体内延迟 import，
+      # 全量自检不触达，故不装。
+      - name: 安装测试依赖（Pillow / numpy）
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install Pillow numpy
+          python -c "import PIL, numpy; print('Pillow', PIL.__version__, '/ numpy', numpy.__version__)"
+
+      # ffmpeg：ubuntu-24.04 镜像**不带**（首跑实测 ffmpeg: command not found，
+      # test_verify_output.py 因此假红）。它不是 python 包，得走 apt。
+      - name: 安装 ffmpeg
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
+
+      # 出绿出红时都能对上是哪台宿主、哪个解释器（跑器首行也会打印一遍）。
+      # 这里对依赖做存在性硬断言：装漏了要立刻红在「环境」这一步，
+      # 而不是伪装成测试断言失败（AC③：缺依赖必须报错）。
+      - name: 环境自述 + 依赖存在性硬断言
+        run: |
+          python -V
+          ffmpeg -version | awk 'NR==1'
+          python - <<'PY'
+          import shutil, sys
+          import PIL, numpy
+          print("Pillow", PIL.__version__, "/ numpy", numpy.__version__)
+          missing = [n for n, ok in (("ffmpeg", shutil.which("ffmpeg")),
+                                     ("Pillow", True), ("numpy", True)) if not ok]
+          if missing:
+              sys.exit("缺依赖：" + ", ".join(missing))
+          PY
+
+      # AC⑤：与本地同一个跑器。失败时它自己打出「断言/异常 + 文件:行 + 输出尾部」，
+      # 所以 CI 日志直接能定位到具体文件与断言（AC②），不必另写解析。
+      - name: 跑全部自检
+        run: python scripts/run_tests.py

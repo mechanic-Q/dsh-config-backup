@@ -1,0 +1,46 @@
+{
+  "version": 2,
+  "channels": {
+    "feishu_439061570ff1": {
+      "id": "feishu_439061570ff1",
+      "platform": "feishu",
+      "name": "飞书账号 1",
+      "nameOrdinal": 1,
+      "assistant": {
+        "provider": "workbuddy",
+        "model": "deepseek-v4.1-flash-sg",
+        "reasoningEffort": "high"
+      },
+      "cwd": "C:\\Users\\LMR\\Documents\\deepseek-harness\\default-workspace",
+      "permission": "workspace-write",
+      "agentPreset": "standard",
+      "commandPermissions": {
+        "dm": {
+          "enabled": true,
+          "users": []
+        },
+        "group": {
+          "enabled": false,
+          "users": []
+        }
+      },
+      "privateAccess": "approved",
+      "enabled": true,
+      "receiveEnabled": true,
+      "config": {
+        "appId": "cli_aa5a4b5b8e389bf8",
+        "appSecret": "GFtsrAkP7EgOMfyGvAEYnhUBryQzgpPN",
+        "ownerOpenId": "ou_948bbe29afeb1d3f52ae8d84ba5adb93"
+      },
+      "sendMode": "queue"
+    }
+  },
+  "allowlist": {
+    "feishu_439061570ff1": [
+      "ou_948bbe29afeb1d3f52ae8d84ba5adb93"
+    ]
+  },
+  "pending": {
+    "feishu_439061570ff1": []
+  }
+}

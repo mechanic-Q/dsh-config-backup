@@ -1,0 +1,15 @@
+{
+ "stages": {},
+ "human_flags": [
+  {
+   "sid": "shot08",
+   "who": "human",
+   "when": "2026-10-22 12:58:34",
+   "verdict": "翻转",
+   "reply": "shot08 翻转了",
+   "evidence": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\scripts\\.tmp_t17_test\\flag_flush_1792645114201\\_frames\\evidence\\human_flag\\shot08_20261022_125834.jpg"
+  }
+ ],
+ "total_minutes": 0.0,
+ "finished_at": "2026-10-22 12:58:34"
+}

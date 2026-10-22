@@ -1,0 +1,90 @@
+{
+  "version": 3,
+  "days": {
+    "2026-10-15": {
+      "total": 0,
+      "models": {
+        "deepseek-ai/deepseek-v4.1-flash": {
+          "input": 0,
+          "output": 0,
+          "reasoning": 0,
+          "cacheRead": 0,
+          "calls": 2,
+          "failed": 2,
+          "ttftMs": 0,
+          "ttftSamples": 0,
+          "decodeMs": 0,
+          "decodeTokens": 0
+        }
+      }
+    }
+  },
+  "models": {
+    "deepseek-ai/deepseek-v4.1-flash": {
+      "input": 0,
+      "output": 0,
+      "reasoning": 0,
+      "cacheRead": 0,
+      "calls": 2,
+      "failed": 2
+    }
+  },
+  "requests": 2,
+  "failedRequests": 2,
+  "samples": [
+    {
+      "at": 1792050979748,
+      "model": "deepseek-ai/deepseek-v4.1-flash",
+      "ok": false,
+      "input": 0,
+      "output": 0,
+      "ttftMs": null,
+      "tps": null,
+      "decodeMs": 0,
+      "decodeTokens": 0,
+      "effort": "high",
+      "origin": "harness",
+      "noUsage": true,
+      "recoveryId": "msg_13e8fe3a4001goTfDKgEUlNAbM",
+      "attempt": 0,
+      "elapsedMs": 1985
+    },
+    {
+      "at": 1792050979746,
+      "model": "deepseek-ai/deepseek-v4.1-flash",
+      "ok": false,
+      "input": 0,
+      "output": 0,
+      "ttftMs": null,
+      "tps": null,
+      "decodeMs": 0,
+      "decodeTokens": 0,
+      "effort": "max",
+      "origin": "harness",
+      "noUsage": true,
+      "recoveryId": "msg_13e8fe3a200173ba52qn82CE9M",
+      "attempt": 0,
+      "elapsedMs": 2385
+    }
+  ],
+  "logical": {
+    "turns": 2,
+    "failed": 2,
+    "recovered": 0,
+    "models": {
+      "deepseek-ai/deepseek-v4.1-flash": {
+        "turns": 2,
+        "failed": 2,
+        "recovered": 0
+      }
+    }
+  },
+  "savings": {
+    "bytesBefore": 0,
+    "bytesAfter": 0,
+    "saved": 0,
+    "blocks": 0,
+    "calls": 2,
+    "promptCalls": 0
+  }
+}

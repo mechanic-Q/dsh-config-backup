@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 6,
+  "revision": 21,
+  "tasks": [
+    {
+      "id": "cba0ec07-b2f8-4932-af99-985c55e96e41",
+      "title": "每日新中国晨报（daily-china-news）",
+      "description": "每天早上 9:00 自动运行 daily-china-news 技能，采集 7 个中国信源 → LLM 分类/去重 → 正文提取 → 摘要 → 渲染手机壁纸风报纸（HTML+PNG）。",
+      "prompt": "加载并执行 daily-china-news 技能：为今天的日期跑一遍完整新闻管道（7 个中国信源采集 → LLM 分类/去重 → 正文提取 → 摘要 → 渲染手机壁纸风报纸 HTML+PNG）。若当日已生成过报纸则跳过或补跑失败的步骤。完成后报告产物路径和各步骤结果。",
+      "status": "failed",
+      "createdAt": 1792094169750,
+      "updatedAt": 1792434721352,
+      "executions": [
+        {
+          "id": "cc105158-a72b-4696-8556-af1a5e7c02c0",
+          "sessionId": "session-83ab8179-58e0-480e-aa6b-9ff92bb1dfa6",
+          "startedAt": 1792198800015,
+          "runGroupId": "25fb0006-a022-4849-a61e-f35043302faa",
+          "verification": {
+            "contract": {
+              "enabled": true,
+              "modelSource": "inherit",
+              "route": {
+                "provider": "buddy",
+                "model": "glm-5.3-flash",
+                "reasoningEffort": "max"
+              },
+              "preset": "coding",
+              "threshold": 0.65
+            },
+            "attempts": [],
+            "applicability": "goal-disabled"
+          },
+          "ownResult": "failed",
+          "ownError": "agent turn ended without completing: interrupted",
+          "endedAt": 1792217149159,
+          "result": "failed",
+          "error": "agent turn ended without completing: interrupted"
+        },
+        {
+          "id": "b47dd6f9-f905-4bb4-a113-77ce762fa64a",
+          "startedAt": 1792285200001,
+          "endedAt": 1792285200013,
+          "result": "failed",
+          "error": "workspace not found: 6915fe10-f988-419e-ae6a-39944e3a9c8f",
+          "runGroupId": "6ff8f796-2947-437a-84eb-2f6f54636572",
+          "verification": {
+            "contract": {
+              "enabled": true,
+              "modelSource": "inherit",
+              "route": {
+                "provider": "workbuddy",
+                "model": "deepseek-v4.1-flash-sg",
+                "reasoningEffort": "high"
+              },
+              "preset": "coding",
+              "threshold": 0.65
+            },
+            "attempts": [],
+            "applicability": "goal-disabled"
+          },
+          "ownResult": "failed",
+          "ownError": "workspace not found: 6915fe10-f988-419e-ae6a-39944e3a9c8f"
+        },
+        {
+          "id": "d211a7c2-d1d9-4eba-a794-3cb555c1737d",
+          "startedAt": 1792371600011,
+          "endedAt": 1792371600023,
+          "result": "failed",
+          "error": "workspace not found: 6915fe10-f988-419e-ae6a-39944e3a9c8f",
+          "runGroupId": "6cb8bfe5-d5b1-4c87-a592-3fe682701efb",
+          "verification": {
+            "contract": {
+              "enabled": true,
+              "modelSource": "inherit",
+              "route": {
+                "provider": "workbuddy",
+                "model": "deepseek-v4.1-flash",
+                "reasoningEffort": "high"
+              },
+              "preset": "coding",
+              "threshold": 0.65
+            },
+            "attempts": [],
+            "applicability": "goal-disabled"
+          },
+          "ownResult": "failed",
+          "ownError": "workspace not found: 6915fe10-f988-419e-ae6a-39944e3a9c8f"
+        }
+      ],
+      "workspaceId": "97b2a554-b3ca-417b-a3a8-161800603bcb",
+      "schedule": {
+        "enabled": false,
+        "lastTriggeredAt": 1792371600011,
+        "runCount": 1,
+        "skippedAt": 1792371600021,
+        "skippedReason": "launch-failed",
+        "mode": "cron",
+        "cron": "0 9 * * *"
+      },
+      "archivedAt": 1792434721352
+    },
+    {
+      "id": "2b8b8e0f-82b3-4bba-bac1-10c3d3a9ab00",
+      "title": "每日新中国晨报（daily-china-news）",
+      "description": "每天早上 9:00 自动运行 daily-china-news 技能，采集 7 个中国信源 → LLM 分类/去重 → 正文提取 → 摘要 → 渲染手机壁纸风报纸（HTML+PNG）。",
+      "prompt": "加载并执行 daily-china-news 技能：为今天的日期跑一遍完整新闻管道（7 个中国信源采集 → LLM 分类/去重 → 正文提取 → 摘要 → 渲染手机壁纸风报纸 HTML+PNG）。若当日已生成过报纸则跳过或补跑失败的步骤。完成后报告产物路径和各步骤结果。",
+      "status": "failed",
+      "createdAt": 1792434721270,
+      "updatedAt": 1792458010394,
+      "executions": [
+        {
+          "id": "af6986e0-0467-4fc3-9ced-1f67820056b4",
+          "sessionId": "session-9df912c2-cb5a-4177-adc1-9163cabc2595",
+          "startedAt": 1792458000005,
+          "endedAt": 1792458010394,
+          "result": "failed",
+          "error": "agent turn ended with an error",
+          "runGroupId": "b2642f67-f272-494c-b530-b8f2404ccc60",
+          "verification": {
+            "contract": {
+              "enabled": true,
+              "modelSource": "inherit",
+              "route": {
+                "provider": "qoder",
+                "model": "qfmodel",
+                "reasoningEffort": "xhigh"
+              },
+              "preset": "coding",
+              "threshold": 0.65
+            },
+            "attempts": [],
+            "applicability": "goal-disabled"
+          },
+          "ownResult": "failed",
+          "ownError": "agent turn ended with an error"
+        }
+      ],
+      "workspaceId": "97b2a554-b3ca-417b-a3a8-161800603bcb",
+      "schedule": {
+        "enabled": true,
+        "nextRunAt": 1792544400000,
+        "lastTriggeredAt": 1792458000005,
+        "runCount": 1,
+        "mode": "cron",
+        "cron": "0 9 * * *"
+      }
+    }
+  ],
+  "scheduler": {
+    "timeZone": "Asia/Shanghai",
+    "ledgerId": "ff9ecefc-4270-4ebf-a3d2-5d37a2dfacf7",
+    "lastTickAt": 1792472817582
+  },
+  "recentRequests": [
+    {
+      "requestId": "c810627c-a484-4df0-8ca9-643a534ca3a5",
+      "fingerprint": "b8d0dba0fef867e6378697259624fd0180400937c71d1270fac804390226e81b"
+    },
+    {
+      "requestId": "bb9a4503-dc91-458f-93bb-94c094481700",
+      "fingerprint": "bafc8fc561d078f8a87f2f71ddd02523704675a4426f6958176101357679c5ce"
+    },
+    {
+      "requestId": "d37543a3-9aaf-4324-84c8-c07456bcd179",
+      "fingerprint": "24e6664b7131db2a7f03c04412e03973f4c1bb511904ee6d5977c41732b8c021"
+    },
+    {
+      "requestId": "85e52222-995a-4d27-ab84-b4248a1269da",
+      "fingerprint": "18684b30538db4f72fdb64d8fb48863dfc4ee449e9a2378e32dd7bd0db846b1a"
+    }
+  ]
+}

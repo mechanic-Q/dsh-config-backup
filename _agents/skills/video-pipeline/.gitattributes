@@ -1,0 +1,3 @@
+# shell 脚本必须 LF：WSL bash 解析 CRLF 会静默失败（2026-09-21 期 start_qwen.sh 事故，
+# s05 连败退出时 s01-s04 已烧 45 分钟）。eol=lf 保证 Windows 侧 checkout 也出 LF。
+*.sh text eol=lf

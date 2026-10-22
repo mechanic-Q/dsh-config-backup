@@ -1,0 +1,17 @@
+{
+  "autoEnabled": true,
+  "watchDebounceMs": 1500,
+  "keepAuto": 20,
+  "keepPre": 10,
+  "autoCleanup": true,
+  "manualDir": "E:\\AI\\deepseek-harness\\.dsh\\undo-snapshots\\manual",
+  "autoDir": "E:\\AI\\deepseek-harness\\.dsh\\undo-snapshots\\auto",
+  "snapshotDir": "C:\\Users\\LMR\\.dsh\\undo-snapshots",
+  "pluginDirs": [],
+  "sensitiveMode": "redact",
+  "createDesktopShortcut": true,
+  "desktopDir": null,
+  "workspaceDirs": [],
+  "scheduledSnapshotEnabled": false,
+  "scheduledSnapshotMs": 0
+}

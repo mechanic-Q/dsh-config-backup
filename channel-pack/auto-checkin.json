@@ -1,0 +1,26 @@
+{
+  "schema": "dsh-codearts-auth/auto-checkin/v1",
+  "enabled": true,
+  "lastDate": "2026-10-22",
+  "lastResult": "3 个渠道：1 个账号领取成功（+1000积分），1 个渠道不支持签到",
+  "lastAt": 1792609820044,
+  "channels": [
+    {
+      "provider": "codearts",
+      "text": "1 个 +1000积分"
+    },
+    {
+      "provider": "qoder",
+      "text": "1 个未开启"
+    },
+    {
+      "provider": "qodercn",
+      "text": "1 个未开启"
+    },
+    {
+      "provider": "zcode",
+      "text": "需手动签到"
+    }
+  ],
+  "dismissedRunAt": 0
+}

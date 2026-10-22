@@ -1,0 +1,37 @@
+feat(#194): s08 收尾补写 3-unfixed 证据条目（重烧后仍翻 → 最难正类）
+
+改了什么：
+- run_pipeline.py 新增 Driver._archive_unfixed_evidence(still_flipped, rounds)：
+  still_flipped 非空时，把每段「最后一次复检轮」在盘的定罪帧拷进
+  _frames/evidence/3-unfixed/<round>_<sid>.jpg，并按同一 manifest 写口追加
+  条目（category/sid/round/frame/frame_win/source_frame/sha256/judge/conf/
+  why/local_verdict/kind=still_flipped/synthetic=False），与 1-confirmed /
+  2-judge-found 两类同构。白名单不动、_archive_evidence_buckets 控制流不动。
+- s08 收尾在 record("s08.still_flipped") 之后、dataset 记录与 still_flipped
+  raise 之前调用（硬失败路径下帧与账也已落盘），try/except 包裹，存证失败不阻塞。
+- _archive_evidence_buckets docstring 更正：3-unfixed 的写者是
+  _archive_unfixed_evidence，本函数永不写它（白名单里没有这个类别）。
+- CONTEXT.md 证据桶术语改四类/各写者口径：1/2 只认判官轮，3-unfixed 由 s08
+  按 still_flipped 写（不要求判官在场），4-human-flag 只由 _flag_commit 写。
+- test_evidence_production.py 新增第 11 节：真实期次布局，先落 1/2 两类再跑
+  3-unfixed；验 round 取最后一次复检轮（shot03→round2）、只复检一轮的段取
+  round1（shot07）、帧在盘且 64 位 sha256 账实一致、既有 1/2 条目 sha256 未被
+  改动、重跑幂等 +0、空名单不碰 manifest/不建目录、缺帧不伪造条目。
+
+踩坑：
+- 重烧梯队的 rounds 记的是「本轮计划重烧的段」，不是「本轮真复检过的段」：
+  rewrite 不可用或无可重烧段 break 时，声明轮次可能从没落地（没有该 round 标签
+  的证据行）。初版严格按 rounds 映射取轮次，这类段会静默 0 条，等于 AC1 漏写。
+  修法：首选声明轮在盘帧，缺失则退回该段真正最后一次在盘复检帧（round 标签按
+  数字取最大），账上绝不写一个从没跑过的 roundN。
+- ledger 的 s08.vision 是整块覆盖，但 evidence 字段由各调用处「读上一块 + 追加
+  + 整块写回」累积（_check_frames 存证循环 :1749、判读离线短路 :1562 都是这个
+  姿势），不是只留最后一轮——照字面把整块视为覆盖会误判早期轮次帧已丢。
+- 条目 sha256 必须对拷贝后的 dst 计算（源帧下一轮重烧前随时被覆盖），
+  verify_evidence_hashes 只认 dst；source_frame 只作溯源记录。
+- _check_frames 末尾没有 ledger.flush（ADR 0008 决策 7 未做，票外）：本票不扩
+  范围，落盘走 manifest 自带原子写，不依赖 flush。
+
+自检：python scripts/test_evidence_production.py 11 节全过；
+python scripts/run_tests.py 绿=45 红=0。
+closes #194

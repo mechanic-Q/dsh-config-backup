@@ -1,0 +1,40 @@
+{
+  "unit": {
+    "name": "schedule",
+    "version": 1
+  },
+  "global": null,
+  "tables": {
+    "tasks": {
+      "schedule-98d344ab-3497-4911-9f22-8c8e61d37949": {
+        "sessionId": "session-3532ffa7-95db-490d-a571-5dafc6f241d8",
+        "record": {
+          "id": "schedule-98d344ab-3497-4911-9f22-8c8e61d37949",
+          "kind": "after",
+          "title": "video-pipeline 全流程执行（2026-10-17 读报单）",
+          "prompt": "定时任务到点：执行 2026-10-17 每日新中国读报单的 video-pipeline 完整流程，并全程记录错误与可优化点。\n\n## 执行序（照此逐步做，不要跳步）\n1. ComfyUI 预热（preflight 会硬拦 ComfyUI 离线）：wsl 运行 python3 -c \"import sys; sys.path.insert(0,'/mnt/c/Users/LMR/.agents/skills/video-pipeline/scripts'); import comfyui_selfheal as cs; print(cs.heal())\" —— heal 内部走 WMI 拉起+wait_healthy 轮询，属主脱离会话，跑完后 curl http://127.0.0.1:18188/queue 复核 200。若 4 分钟仍未就绪，报告后停止（不叫人硬等）。\n2. 开工：cd /mnt/c/Users/LMR/.agents/skills/video-pipeline && python3 scripts/new_daily.py 2026-10-17 —— 记下打印的 slug 与 driver 命令。\n3. 检查生成的口播稿（<slug>/00_口播稿/口播稿.md）：标题、来源、日期头是否完整。\n4. 脱离启动 driver：nohup setsid python3 scripts/run_pipeline.py --script <new_daily 打印的口播稿路径> --gate-timeout 28800 > /tmp/vp-driver-1017.log 2>&1 &（入口层绝不传 --gate-approved，绝不并行第二条流水线）。背景 job 挂 DSH 后台任务盯输出。\n5. 盯运行：定期读 /tmp/vp-driver-1017.log，观察 s01→s13 各阶段 stamps（<slug>/_driver/stage_*.json）推进。记录每个阶段的耗时、重试、警告。\n6. s04 Strata 窗口 / s08 烧卡 / s11 封面等节点正常即不打扰；driver 飞书叫人或报错时，读日志定位根因，能自愈的修复后续跑（重跑同命令即续跑），不能自愈的停下报告用户。\n7. 到 s12 确认门（飞书发成片+封面）：提醒用户飞书群里审核，等待回复；用户在 agent 会话明确批准时才可停 driver 重启加 --gate-approved 续跑。\n8. s13 发布后读 10_发布/发布核验报告.md，核验四平台结果。\n9. 汇总：执行中发现的错误清单 + 可优化点清单（含日志证据），作为最终回复交付。\n\n## 约束\n- 全程记录：每阶段耗时、错误/重试次数、日志原文关键行（供最终报告引用）。\n- 严禁并行第二个视频任务；严禁传 --gate-approved（除非用户在会话中明确批准）。\n- 项目铁律：项目文件夹必须在稿子旁（new_daily.py 已保证），勿手动改路径。\n- 若报纸产物缺失或含占位摘要（3新闻_概述.md 有\"占位\"字样），停下报告，不硬跑。",
+          "afterSeconds": 600,
+          "scheduledAt": "2026-10-17T06:50:09.661Z"
+        },
+        "status": "inactive",
+        "deliveryHistory": {
+          "records": [
+            {
+              "scheduledAt": "2026-10-17T06:50:09.661Z",
+              "deliveredAt": "2026-10-17T06:50:09.700Z",
+              "messageId": "b1fc5a51-295c-435e-9bd4-513113d864e8",
+              "prompt": "定时任务到点：执行 2026-10-17 每日新中国读报单的 video-pipeline 完整流程，并全程记录错误与可优化点。\n\n## 执行序（照此逐步做，不要跳步）\n1. ComfyUI 预热（preflight 会硬拦 ComfyUI 离线）：wsl 运行 python3 -c \"import sys; sys.path.insert(0,'/mnt/c/Users/LMR/.agents/skills/video-pipeline/scripts'); import comfyui_selfheal as cs; print(cs.heal())\" —— heal 内部走 WMI 拉起+wait_healthy 轮询，属主脱离会话，跑完后 curl http://127.0.0.1:18188/queue 复核 200。若 4 分钟仍未就绪，报告后停止（不叫人硬等）。\n2. 开工：cd /mnt/c/Users/LMR/.agents/skills/video-pipeline && python3 scripts/new_daily.py 2026-10-17 —— 记下打印的 slug 与 driver 命令。\n3. 检查生成的口播稿（<slug>/00_口播稿/口播稿.md）：标题、来源、日期头是否完整。\n4. 脱离启动 driver：nohup setsid python3 scripts/run_pipeline.py --script <new_daily 打印的口播稿路径> --gate-timeout 28800 > /tmp/vp-driver-1017.log 2>&1 &（入口层绝不传 --gate-approved，绝不并行第二条流水线）。背景 job 挂 DSH 后台任务盯输出。\n5. 盯运行：定期读 /tmp/vp-driver-1017.log，观察 s01→s13 各阶段 stamps（<slug>/_driver/stage_*.json）推进。记录每个阶段的耗时、重试、警告。\n6. s04 Strata 窗口 / s08 烧卡 / s11 封面等节点正常即不打扰；driver 飞书叫人或报错时，读日志定位根因，能自愈的修复后续跑（重跑同命令即续跑），不能自愈的停下报告用户。\n7. 到 s12 确认门（飞书发成片+封面）：提醒用户飞书群里审核，等待回复；用户在 agent 会话明确批准时才可停 driver 重启加 --gate-approved 续跑。\n8. s13 发布后读 10_发布/发布核验报告.md，核验四平台结果。\n9. 汇总：执行中发现的错误清单 + 可优化点清单（含日志证据），作为最终回复交付。\n\n## 约束\n- 全程记录：每阶段耗时、错误/重试次数、日志原文关键行（供最终报告引用）。\n- 严禁并行第二个视频任务；严禁传 --gate-approved（除非用户在会话中明确批准）。\n- 项目铁律：项目文件夹必须在稿子旁（new_daily.py 已保证），勿手动改路径。\n- 若报纸产物缺失或含占位摘要（3新闻_概述.md 有\"占位\"字样），停下报告，不硬跑。"
+            }
+          ],
+          "earlierRecordsUnavailable": false,
+          "earlierRecordsPruned": false
+        },
+        "lastDelivery": {
+          "scheduledAt": "2026-10-17T06:50:09.661Z",
+          "deliveredAt": "2026-10-17T06:50:09.700Z",
+          "messageId": "b1fc5a51-295c-435e-9bd4-513113d864e8"
+        }
+      }
+    }
+  }
+}

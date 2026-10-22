@@ -1,0 +1,9 @@
+docs: ADR 0008 证据链闭环 + CONTEXT 词条（人审桶/真值帧冻结/帧失效）
+
+2026-10-22 grill 拍板（#189 规格，票 #190–#195）：
+- 新增决策 ADR 0008：人审证据独立成 4-human-flag 桶、归档门不收窄也不放宽、
+  真值帧冻结读取（优先级 + sha256 硬条件）、frame_stale 显式标记、
+  3-unfixed 由 s08 收尾补写、台账关键路径显式 flush。
+- CONTEXT.md：证据桶条扩为四类并补 manifest 双形态；新增
+  真值帧冻结 / 帧失效 / 证据链闭环 三条词条。
+- procedures/_inbox：记「审批弹窗禁用时 ask_user_question 卡死 120s」一条。

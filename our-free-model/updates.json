@@ -1,0 +1,14 @@
+{
+  "applied": [
+    {
+      "from": "2.5.3",
+      "to": "2.5.5",
+      "at": 1792419996925,
+      "ok": true,
+      "files": 79,
+      "bytes": 4838418,
+      "backedUp": 78,
+      "activated": true
+    }
+  ]
+}

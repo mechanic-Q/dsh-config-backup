@@ -1,0 +1,37 @@
+fix(#192): 归档门在函数自身也关上，类别只走白名单
+
+判官缺席不归档这道门原先只由调用点（_check_frames:1778）把关，函数
+_archive_evidence_buckets 自己没有任何守卫：一旦被直接调用（测试、探针、
+未来调用点），judge_block.ok=False 时它照样走到末尾无条件
+_write_evidence_manifest，落一份空清单——等于对「本轮无类别证据」作伪证；
+judge_block 为 None 时更直接 AttributeError（.get 打在 None 上）。
+
+改了什么
+- run_pipeline.py _archive_evidence_buckets：函数顶部加同一道门（非 dict 或
+  ok=False 一律 return 0），在建目录/读清单/写清单之前返回——判官缺席连空
+  manifest 都不落盘、不建类别子目录。调用点的门保留（省掉无谓的清单读取），
+  两侧注释口径对齐。
+- 类别改白名单闭集：kind_cat 只映射 confirmed / judge_found，其余 kind
+  （local_false / judge_normal / 无 kind / 自编名称）一律不归档，不往闭合词表
+  里塞无定义类别；4-human-flag 永不由本函数写（只归人审指认回调）。
+- docstring 与行为对齐，逐类写清「谁写、何时写」：1-confirmed / 2-judge-found
+  本函数在判官轮写；3-unfixed 生产侧当前还没有写者（#194 落地后由 s08 收尾在
+  s08.still_flipped 非空时写、round 取最后一次复检轮次）；4-human-flag 只由
+  _flag_commit → _manifest_human_flag 写（round=human_flag）；并写明判官缺席时
+  可见性由行内 evidence_frames 承担（ADR 0008 决策 2）。
+- test_evidence_production.py 第 1 节：原 fail-open 断言传空证据列表、又不查
+  清单是否落盘，等于「没东西可写」冒充「挡住了」。改成证据与 rows 都非空，
+  对 ok=False / None / 非 dict 三种缺席形态各断言三件事（added=0、manifest
+  不存在、类别子目录不存在）；另加白名单用例：喂进 local_false / human_flag /
+  unfixed / 自编类别，断言只归档 2 条、类别恰为判官轮两类、⊆ 四类词表、
+  不含 4-human-flag。
+
+踩坑（实证）
+- 「空列表 + 只断言返回值」的 fail-open 测试是假绿：函数在 ok=False 时仍会
+  无条件写出空 manifest，旧断言照样过。门要测的是「写」这个动作、不是「有没有
+  东西可写」——证据必须非空，且必须查落盘结果，不能只看返回值。
+- 新断言做了变异验证：撤掉函数自身的门 → added=1 且 manifest 落盘（红）；
+  把 4-human-flag 塞进 kind_cat → added=3（红）；还原后 10 节全绿。
+- 全量 python scripts/run_tests.py：44 绿 0 红；check_mechanical 新增违规 0。
+
+closes #192

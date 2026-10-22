@@ -1,0 +1,40 @@
+{
+  "episode": [
+    "2026-10-17",
+    "fake-slug"
+  ],
+  "evidence": [
+    {
+      "category": "4-human-flag",
+      "sid": "shot01",
+      "round": "human_flag",
+      "frame": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\scripts\\.tmp_t17_test\\fake-slug\\_frames\\evidence\\human_flag\\shot01_20261022_045613.jpg",
+      "frame_win": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\scripts\\.tmp_t17_test\\fake-slug\\_frames\\evidence\\human_flag\\shot01_20261022_045613.jpg",
+      "source_frame": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\scripts\\.tmp_t17_test\\fake-slug\\_frames\\shot01.jpg",
+      "sha256": "42f114e0f62e883f51ee40aba3670315c6fefcb88f36b4058e5a99eab2c5f534",
+      "judge": null,
+      "conf": null,
+      "why": "shot01 翻转了",
+      "local_verdict": "翻转",
+      "kind": "human_flag",
+      "synthetic": false,
+      "note": ""
+    },
+    {
+      "category": "4-human-flag",
+      "sid": "shot03",
+      "round": "human_flag",
+      "frame": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\scripts\\.tmp_t17_test\\fake-slug\\_frames\\evidence\\human_flag\\shot03_20261022_045613.jpg",
+      "frame_win": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\scripts\\.tmp_t17_test\\fake-slug\\_frames\\evidence\\human_flag\\shot03_20261022_045613.jpg",
+      "source_frame": "C:\\Users\\LMR\\.agents\\skills\\video-pipeline\\scripts\\.tmp_t17_test\\fake-slug\\_frames\\shot03.jpg",
+      "sha256": "2d711642b726b04401627ca9fbac32f5c8530fb1903cc4db02258717921a4881",
+      "judge": null,
+      "conf": null,
+      "why": "shot03 翻转了",
+      "local_verdict": "翻转",
+      "kind": "human_flag",
+      "synthetic": false,
+      "note": ""
+    }
+  ]
+}

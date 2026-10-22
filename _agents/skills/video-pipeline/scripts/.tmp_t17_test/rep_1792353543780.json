@@ -1,0 +1,12 @@
+{
+ "stages": {},
+ "human_flags": [
+  {
+   "sid": "shot01",
+   "who": "human",
+   "verdict": "翻转"
+  }
+ ],
+ "total_minutes": 0.0,
+ "finished_at": "2026-10-19 03:59:03"
+}

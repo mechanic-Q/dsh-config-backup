@@ -1,0 +1,37 @@
+{
+ "slug": "t16-test",
+ "stages": {},
+ "strata_window": {
+  "s08_rewrite_reopen": {
+   "ok": true
+  },
+  "s08_rewrite_close": {
+   "ok": true,
+   "already_off": true
+  }
+ },
+ "s08": {
+  "segments": 2,
+  "flip_regen_rounds": [
+   {
+    "round": 1,
+    "shots": [
+     "shot01"
+    ],
+    "mode": "strip"
+   },
+   {
+    "round": 2,
+    "shots": [
+     "shot01"
+    ],
+    "mode": "rewrite"
+   }
+  ],
+  "still_flipped": [
+   "shot01"
+  ]
+ },
+ "total_minutes": 29877630.2,
+ "finished_at": "2026-10-22 16:30:09"
+}
